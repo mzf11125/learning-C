@@ -19,10 +19,12 @@ int main()
     if(step !=0){
     for (int i = start; i<=stop; i++){
      printf("%d ", i);   
-    }else {
+    }
+    }
+    else {
         printf("ERRRORORORROROROROROROROROROROROORO!!!!!!!! YOUVE BEEN HACKED!!!!");
     }
-    }
+    
     return 0;
 }
 
