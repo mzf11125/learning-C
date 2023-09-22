@@ -2,19 +2,15 @@
 
 int main()
 {
-    char N[11], M[100];
+    char N[11], M[101];
     char C; 
     int O;
     
-    scanf("%10s", N);
+    scanf("%s", N);
     
     
-    getchar();
+    scanf(" %[^\n]", M);
     
-    scanf("%99[^\n]", M);
-    
-    
-    getchar();
     
     scanf(" %c %d", &C, &O); 
 
