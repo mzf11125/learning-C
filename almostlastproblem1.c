@@ -2,26 +2,26 @@
 
 int main()
 {
-    char id[11], name[100];
-    char class; 
-    int num;
+    char N[11], M[100];
+    char C; 
+    int O;
     
-    scanf("%10s", id);
-    scanf("%99s", name);
+    scanf("%10s", N);
     
+    
+    getchar();
+    
+    scanf("%99[^\n]", M);
+    
+    
+    getchar();
+    
+    scanf(" %c %d", &C, &O); 
 
-    scanf(" %c", &class); 
-    
-    
-    scanf(" %[^\n]", name);
-    
-    
-    scanf(" %c %d", &class, &num); 
-
-    printf("Id    : %s\n", id);
-    printf("Name  : %s\n", name);
-    printf("Class : %c\n", class);
-    printf("Num   : %d\n", num);
+    printf("Id    : %s\n", N);
+    printf("Name  : %s\n", M);
+    printf("Class : %c\n", C);
+    printf("Num   : %d\n", O);
 
     return 0;
 }
