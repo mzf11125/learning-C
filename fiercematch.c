@@ -13,7 +13,7 @@ int main(){
         printf("%d\n", N);
     } else 
     {
-        printf("Operator not found");
+        printf("Operator not found\n");
         return 1;
     }
     
