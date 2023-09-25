@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    char input[100];
+
     int X, Y, N;
     char operator;
 
