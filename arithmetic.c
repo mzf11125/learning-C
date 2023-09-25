@@ -1,18 +1,13 @@
 #include <stdio.h>
 
-int main()
-{
-    int N, step, M;
+int main() {
+    int N, M;
+
     scanf("%d %d", &N, &M);
-    
-    if (step != 0) {
-        for (int i = N; i <= M + 1; i++) {
-            printf("%d\n", i);
-        }
+
+    for (int i = 0; i < M+1; i++) {
+        printf("%d\n", N + i);
     }
-    else {
-        printf("ERRRORORORROROROROROROROROROROROORO!!!!!!!! YOU'VE BEEN HACKED!!!!\n");
-    }
-    
+
     return 0;
 }
