@@ -7,7 +7,7 @@ int main() {
     
     if (N > 100000) {
         printf("Input exceeds the maximum limit of 100000. Please enter a smaller number.\n");
-        return 1; // Exit the program with an error code
+        return 1; 
     }
     
     int addition = N + N;
