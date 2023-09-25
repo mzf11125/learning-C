@@ -3,10 +3,9 @@
 int main(){
     long long A, B, C;
     long long triplier;
-    scanf("%l %l %l", &A, &B, &C);
+    scanf("%lld %lld %lld", &A, &B, &C);
     triplier = A * B * C;
-    printf("%l\n", triplier);
-	
+    printf("%lld\n", triplier);
     
     return 0;
 }
