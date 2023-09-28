@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int x, y, k;
+    long long x, y, k;
     scanf("%d %d %d", &x, &y, &k);
 
     
@@ -10,11 +10,11 @@ int main() {
         return 1; 
     }
 
-    int time = -1; 
+    long long time = -1.00; 
 
     if ((x < k && y > k) || (x > k && y < k)) {
         
-        int time_to_first, time_to_second;
+        long long time_to_first, time_to_second;
 
         if (x < k) {
             time_to_first = k - x;
@@ -35,7 +35,7 @@ int main() {
         }
     }
 
-    printf("%d\n", time);
+    printf("%.0.lld\n", time);
 
     return 0;
 }
