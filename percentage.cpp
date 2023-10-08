@@ -12,7 +12,7 @@ int main() {
             scanf("%d %d", &P, &N);
             
             if (P >= 1 && P <= 100 && N >= 1 && N <= 2147483647) { 
-                double result = (P * N) / 100.0; 
+                double result = (P/100.0) * N;
                 results[i] = result;
             } else {
                 printf("Invalid input\n");
