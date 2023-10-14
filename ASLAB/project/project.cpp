@@ -7,18 +7,20 @@
 
 struct Grid {
     int cells[GRID_SIZE][GRID_SIZE];
+    struct grid* = next;
+    struct grid8 = prev;
 };
 
 struct UserData {
     char userID[7];
     char username[16];
     int score;
-};
+}*head = NULL, *tail = NULL;
 
 struct HashNode {
     struct UserData data;
     struct HashNode* next;
-};
+}*head = NULL, *tail = NULL;
 
 struct HashNode* hashTable[HASH_TABLE_SIZE];
 
@@ -87,6 +89,7 @@ void playGame(struct Grid* gameGrid) {
 }
 
 void swipeUp(struct Grid* grid) {
+	
 }
 
 void swipeDown(struct Grid* grid) {
