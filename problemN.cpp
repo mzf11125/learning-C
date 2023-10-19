@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    long long int tc;
-    scanf("%lld", &tc);
+    long long int t;
+    scanf("%lld", &t);
 
-    for (long long int i = 0; i < tc; i++) {
+    for (long long int i = 0; i < t; i++) {
         long long int a;
         long long int max = -999999999999LL;
         long long int smax = -999999999999LL;
