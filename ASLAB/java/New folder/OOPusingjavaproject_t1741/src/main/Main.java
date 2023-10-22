@@ -1,11 +1,9 @@
 package main;
 
 import java.util.Scanner;
-
-import client.ClientsData;
 //import 
 
-import auth.Authmain;
+//import auth.Authmain;
 
 public class Main {
 
@@ -18,7 +16,7 @@ public class Main {
 	protected String sus;
 	protected String su1s;
 	
-	Authmain user = new Authmain(sus, su1s);
+//	Authmain user = new Authmain(sus, su1s);
 	
 	public void display() {
 		System.out.println("███████████████████████████████████████████████\r\n"
@@ -57,6 +55,10 @@ public class Main {
 	
 	public void client() {
 		
+		
+		
+		
+		
 	}
 
 	public void master() {
@@ -65,9 +67,7 @@ public class Main {
 	}
 
 	public Main() {
-		mainMenu();
-		
-//		Main.mainMenu();		
+		mainMenu();	
 	}
 	public static void main(String[] args) {
 		new Main();
