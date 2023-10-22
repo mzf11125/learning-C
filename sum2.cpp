@@ -18,7 +18,7 @@ int main() {
         for (int j = 0; j < X; j++) {
             int col = 0;
             for (int i = 0; i < X; i++) {
-                colSum += arr[i][j];
+                col += arr[i][j];
             }
             printf(" %d", col);
         }

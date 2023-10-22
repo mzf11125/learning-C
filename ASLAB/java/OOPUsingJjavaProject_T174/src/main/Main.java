@@ -43,10 +43,10 @@ public class Main {
 				master();
 				break;
 			case 2:
-				client()
+				client();
 				break;
 			case 3:
-				
+				System.exit(0);
 				break;
 			}
 			
@@ -54,6 +54,10 @@ public class Main {
 	}
 	
 	public void client() {
+		
+		
+		
+		
 		
 	}
 
@@ -63,7 +67,7 @@ public class Main {
 	}
 
 	public Main() {
-		
+		mainMenu();
 		
 //		Main.mainMenu();		
 	}
