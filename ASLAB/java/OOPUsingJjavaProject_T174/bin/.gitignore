@@ -1,4 +1,9 @@
+/WhereAmI/
+/login/
+/whereami/
+/register/
 /main/
-/KeepAlive/
-/switchpacket/
-/keepalive/
+/logout/
+/auth/
+/master/
+/client/

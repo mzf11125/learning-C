@@ -1,13 +1,8 @@
 package main;
 
-public class Menu {
 
-	public void mainMenu() {
-		int input;
-		
-		do {
-			
-		}while(input >= 3 && );
-	}
+public class Menu extends Main{
+	
+	
 
 }
