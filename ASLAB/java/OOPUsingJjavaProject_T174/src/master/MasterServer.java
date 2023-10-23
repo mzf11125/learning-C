@@ -32,19 +32,37 @@ Scanner scan = new Scanner (System.in);
 				
 				
 			}
-			else if(input == "/op") {
+			else if(input == "channelist" || input == "channels" || input == "chlist") {
+				
+				
+				
 				
 			}
 			else if(input == "/iooisda") {
 				
+				
+				
+				
+				
 			}
 			else if(input == "knodsauiwdi") {
+				
+				
+				
+				
+				
 				
 			}	
 			else if(input == "/temp") {
 				
+				
+				
+				
 			}
 			else if(input == "?" || input == "help") {
+				
+				
+				
 				
 			}
 			else {
