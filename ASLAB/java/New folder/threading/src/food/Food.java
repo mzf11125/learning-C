@@ -37,3 +37,4 @@ public class Food {
 	public void start() {
 		
 	}
+}

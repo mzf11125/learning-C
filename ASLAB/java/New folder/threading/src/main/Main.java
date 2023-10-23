@@ -9,6 +9,8 @@ import food.NasiUduk;
 import food.Sushi;
 
 public class Main {
+	
+	public static Counter counter = new Counter(0);
 
 	public Main() {
 		
@@ -22,17 +24,25 @@ public class Main {
 		MyThread t2 = new MyThread();
 		t2.start();
 		
-		
-		
-		
-		Vector<Food> foods = new Vector<>();
-		NasiUduk nu1 = new NasiUduk(5, 5, "Nasi Uduk punya Vito", 50, t3);
-		foods.add(nu1);
-		for (Food food : foods) {
-			Thread t3 = new Thread(nu1);
-			t3.start();
+		try {
+			t1.join();
+			t2.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
 		}
-		Sushi s1 = new Sushi(15, "Sushi ikan lele", 200, "Lele");
+		
+		System.out.println(counter.C);
+		
+		
+//		Vector<Food> foods = new Vector<>();
+//		NasiUduk nu1 = new NasiUduk(5, 5, "Nasi Uduk punya Vito", 50, t2);
+//		foods.add(nu1);
+//		for (Food food : foods) {
+//			Thread t3 = new Thread(nu1);
+//			t3.start();
+//		}
+//		
+//		Sushi s1 = new Sushi(15, "Sushi ikan lele", 200, "Lele");
 		
 	}
 
@@ -53,3 +63,5 @@ public class Main {
 //Nasi uduk
 //
 
+
+//Synchronize 
