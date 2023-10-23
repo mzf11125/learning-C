@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-import
+import 
 
 public class MasterServer {
 Scanner scan = new Scanner (System.in);
