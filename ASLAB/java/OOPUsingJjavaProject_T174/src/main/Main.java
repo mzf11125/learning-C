@@ -11,10 +11,15 @@ import client.clientFunction;
 //import 
 
 import auth.Authmain;
+import channel.Channel;
+import channel.Consumer;
+import channel.Producer;
 import master.MasterServer;
 import client.clientFunction;
 
 public class Main {
+	
+	Vector<> 
 	Random random = new Random();
 	Scanner scan = new Scanner(System.in);
 	clientFunction client = new clientFunction();
@@ -72,6 +77,14 @@ public class Main {
 	
 	public Main() {
 		mainMenu();
+		
+	    Channel channel = new Channel();
+
+	    Thread producerThread = new Thread(new Producer(channel));
+	    Thread consumerThread = new Thread(new Consumer(channel));
+
+	    producerThread.start();
+	    consumerThread.start();
 		
 //		Main.mainMenu();		
 	}

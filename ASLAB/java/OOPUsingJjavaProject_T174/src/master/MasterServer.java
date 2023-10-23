@@ -1,74 +1,78 @@
 package master;
 
-import java.util.Random;
-import java.util.Scanner;
-
+import java.util.Vector;
 
 public class MasterServer {
-Scanner scan = new Scanner (System.in);
-Random random = new Random();
-int randomInt = random.nextInt(100);
-//	public MasterServer() {
-//	
-//			
-//		}
-	public void MasterServer1() {
-		do {
-			System.out.println("Booting master application...\r\n"
-					+ "\r\n"
-					+ "Initializing MasterDatastore\r\n"
-					+ "Starting clearDeadClients task\r\n"
-					+ "Initializing AuthController\r\n"
-					+ "Getting clientList directory\r\n"
-					+ "Getting clients database\r\n"
-					+ "Loading clients\r\n"
-					+ "Initializing PubSubManager\r\n"
-					+ "Running startup check\r\n"
-					+ "Checking datastore directory\r\n"
-					+ "Checking checkup file\r\n"
-					+ "Getting pubSub directory\r\n"
-					+ "Starting readFile task\r\n"
-					+ "\r\n"
-					+ "Done ("+ randomInt +")! For help type \"help\" or \"?\"\r\n"
-					+ "____________________________________________________________________________________________________");
-					String input1 = scan.nextLine();
+    private Vector<String> clientList = new Vector<>();
+    private Vector<String> channelList = new Vector<>();
 
-					
-					if (input1.equals("clientlist") || input1.equals("clients") || input1.equals("clist")) {
-					     // Handle client list action
-					} else if (input1.equals("channellist") || input1.equals("channels") || input1.equals("chlist")) {
-					     // Handle channel list action
-					} else if (input1.equals("")) {
-					    
-						
-					} else if (input1.isEmpty()) {
-					    // Handle empty input action
-					 } else if (input1.equals("?") || input1.equals("help")) {
-					        System.out.println("Available commands:\r\n"
-					                + "\r\n"
-					                + " > stop, exit, quit, end\r\n"
-					                + "    Stops the application.\r\n"
-					                + "\r\n"
-					                + " > help, ?\r\n"
-					                + "    Shows this help message.\r\n"
-					                + "\r\n"
-					                + " > channellist, channels, chlist\r\n"
-					                + "    Shows a list of all channels.\r\n"
-					                + "\r\n"
-					                + " > clientlist, clients, clist\r\n"
-					                + "    Shows a list of all connected clients.\r\n"
-					                + "\r\n"
-					                + " > addchannel, addchan, addch\r\n"
-					                + "    Adds a channel.\r\n"
-					                + "\r\n"
-					                + " > removechannel, removechan, removech\r\n"
-					                + "    Removes a channel.");
-					    } else {
-					        System.out.println("Please type a valid input.");
-					    }
-					} while (true);
-	}
+    public static void main(String[] args) {
+        MasterServer master = new MasterServer();
+        master.start();
+    }
+    long startTime();
+    public void start() {
+        System.out.println("Getting clientList directory");
+        System.out.println("Getting clients database");
+        System.out.println("Loading clients");
+        System.out.println("Initializing PubSubManager");
+        System.out.println("Running startup check");
+        System.out.println("Checking datastore directory");
+        System.out.println("Checking checkup file");
+        
+
+        System.out.println("Getting pubSub directory");
+       
+
+        System.out.println("Starting readFile task");
+        
+        long endTime = System.currentTimeMillis(); // Record the end time
+        long initializationTime = endTime - startTime;
+        System.out.println("\nDone (0.019s)! For help type \"help\" or \"?\"");
+        System.out.println("____________________________________________________________________________________________________");
+        Help();
+    }
+
+    public void Help() {
+        System.out.println("Available commands:\n" +
+                "> stop, exit, quit, end\n    Stops the application.\n" +
+                "> help, ?\n    Shows this help message.\n" +
+                "> channellist, channels, chlist\n    Shows a list of all channels.\n" +
+                "> clientlist, clients, clist\n    Shows a list of all connected clients.\n" +
+                "> addchannel, addchan, addch\n    Adds a channel.\n" +
+                "> removechannel, removechan, removech\n    Removes a channel.\n" +
+                "____________________________________________________________________________________________________\n");
+    }
+
+    public void showChannelList() {
+        // Implement logic to display the list of channels
+        System.out.println("List of channels: ");
+        for (String channel : channelList) {
+            System.out.println(channel);
+        }
+    }
+
+    public void showClientList() {
+        // Implement logic to display the list of connected clients
+        System.out.println("List of connected clients: ");
+        for (String client : clientList) {
+            System.out.println(client);
+        }
+    }
+
+    public void addChannel(String channel) {
+        // Implement logic to add a channel
+        channelList.add(channel);
+        System.out.println("Channel '" + channel + "' added.");
+    }
+
+    public void removeChannel(String channel) {
+        // Implement logic to remove a channel
+        if (channelList.contains(channel)) {
+            channelList.remove(channel);
+            System.out.println("Channel '" + channel + "' removed.");
+        } else {
+            System.out.println("Channel not found: '" + channel + "'");
+        }
+    }
 }
-
-
-
