@@ -2,8 +2,8 @@ package channel;
 
 import java.util.Vector;
 
-class Channel {
-    private Vector<String> messages;
+public class Channel {
+    protected Vector<String> messages;
 
     public Channel() {
         messages = new Vector<>();

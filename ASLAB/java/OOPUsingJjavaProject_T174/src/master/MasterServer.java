@@ -1,37 +1,57 @@
 package master;
 
+import java.util.Scanner;
 import java.util.Vector;
 
 public class MasterServer {
-    private Vector<String> clientList = new Vector<>();
-    private Vector<String> channelList = new Vector<>();
-
+    protected Vector<String> clientList = new Vector<>();
+    protected Vector<String> channelList = new Vector<>();
+    Scanner scan = new Scanner(System.in);
+    
     public static void main(String[] args) {
         MasterServer master = new MasterServer();
         master.start();
     }
-    long startTime();
+
     public void start() {
-        System.out.println("Getting clientList directory");
-        System.out.println("Getting clients database");
-        System.out.println("Loading clients");
-        System.out.println("Initializing PubSubManager");
-        System.out.println("Running startup check");
-        System.out.println("Checking datastore directory");
-        System.out.println("Checking checkup file");
-        
-
-        System.out.println("Getting pubSub directory");
-       
-
-        System.out.println("Starting readFile task");
-        
-        long endTime = System.currentTimeMillis(); // Record the end time
-        long initializationTime = endTime - startTime;
-        System.out.println("\nDone (0.019s)! For help type \"help\" or \"?\"");
-        System.out.println("____________________________________________________________________________________________________");
-        Help();
-    }
+    	String input;
+    	System.out.println("> Getting clientList directory\n"
+    			+ "> Getting clients database\n"
+    			+ "> Loading clients\n"
+    			+ "> Initializing PubSubManager\n"
+    			+ "> Running startup check\n"
+    			+ "> Checking datastore directory\n"
+    			+ "> Checking checkup file\n"
+    			+ "> Getting pubSub directory\n"
+    			+ "> Starting readFile task\n\n"
+    			+ "> Done (0.019s)! For help type \"help\" or \"?\"\n"
+    			+ "____________________________________________________________________________________________________");
+        do {
+        	System.out.print(">> ");
+            input = scan.nextLine();
+        	if (input.equals("stop") || input.equals("exit") || input.equals("quit") || input.equals("end")) {
+                System.exit(0);
+            } else if (input.equals("help") || input.equals("?")) {
+                Help();
+            } else if (input.equals("channellist") || input.equals("channels") || input.equals("chlist")) {
+            	ChannelList();
+            } else if (input.equals("clientlist") || input.equals("clients") || input.equals("clist")) {
+            	ClientList();
+            } else if (input.equals("addchannel") || input.equals("addchan") || input.equals("addch")) {
+                System.out.println("Adds a channel.");
+                String addChannel = scan.nextLine();
+                channelList.add(addChannel);
+            } else if (input.equals("removechannel") || input.equals("removechan") || input.equals("removech")) {
+                System.out.println("Removes a channel.");
+                String removeChannel = scan.nextLine();
+                removeChannel(removeChannel);
+            } else {
+                System.out.println("Invalid command");
+                System.out.println(">> ");
+            }
+          }while(true);  
+        }
+    
 
     public void Help() {
         System.out.println("Available commands:\n" +
@@ -44,16 +64,14 @@ public class MasterServer {
                 "____________________________________________________________________________________________________\n");
     }
 
-    public void showChannelList() {
-        // Implement logic to display the list of channels
+    public void ChannelList() {
         System.out.println("List of channels: ");
         for (String channel : channelList) {
             System.out.println(channel);
         }
     }
 
-    public void showClientList() {
-        // Implement logic to display the list of connected clients
+    public void ClientList() {
         System.out.println("List of connected clients: ");
         for (String client : clientList) {
             System.out.println(client);
@@ -61,13 +79,11 @@ public class MasterServer {
     }
 
     public void addChannel(String channel) {
-        // Implement logic to add a channel
         channelList.add(channel);
         System.out.println("Channel '" + channel + "' added.");
     }
 
     public void removeChannel(String channel) {
-        // Implement logic to remove a channel
         if (channelList.contains(channel)) {
             channelList.remove(channel);
             System.out.println("Channel '" + channel + "' removed.");

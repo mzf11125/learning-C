@@ -1,25 +1,17 @@
-
-
 package main;
 
-
-import java.util.Scanner;
-import java.util.*;
 import java.util.Random;
-import java.io.File;
-import client.clientFunction;
-//import 
-
-import auth.Authmain;
+import java.util.Scanner;
+import java.util.Vector;
 import channel.Channel;
-import channel.Consumer;
-import channel.Producer;
-import master.MasterServer;
+import channel.ClientChannel;
+import channel.MasterChannel;
 import client.clientFunction;
+import auth.Authmain;
+import master.MasterServer;
 
 public class Main {
 	
-	Vector<> 
 	Random random = new Random();
 	Scanner scan = new Scanner(System.in);
 	clientFunction client = new clientFunction();
@@ -58,7 +50,7 @@ public class Main {
 				input = scan.nextInt();scan.nextLine();
 				switch(input) {
 				case 1:
-					master.MasterServer1();
+					master.start();
 					break;
 				case 2:
 					client.client();
@@ -70,8 +62,7 @@ public class Main {
 				
 			}while(input > 3 || input <  1);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			//e.printStackTrace();
+			
 		}
 	}
 	
@@ -80,15 +71,16 @@ public class Main {
 		
 	    Channel channel = new Channel();
 
-	    Thread producerThread = new Thread(new Producer(channel));
-	    Thread consumerThread = new Thread(new Consumer(channel));
+	    Thread producerThread = new Thread(new MasterChannel(channel));
+	    Thread consumerThread = new Thread(new ClientChannel(channel));
 
 	    producerThread.start();
 	    consumerThread.start();
 		
-//		Main.mainMenu();		
+	
 	}
 	public static void main(String[] args) {
 		new Main();
+		
 	}
 }
