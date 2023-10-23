@@ -15,6 +15,7 @@ public class MyThread extends Thread{
 //				// TODO Auto-generated catch block
 ////				e.printStackTrace();
 //			}
+			System.out.println(i);
 			Main.counter.increment();
 		}
 	}
