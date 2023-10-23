@@ -8,8 +8,11 @@ public class CheckupTmpFileHandler {
 
 	public void createcheckupTmp() {
 		File checkupTmpFile = new File(CHECKUP_TMP_PATH);
-		if (!checkupTmpFile) {
-			
+		if (checkupTmpFile.exists()) {
+			System.out.println();
+		}
+		else{
+			System.out.println("File not detected");
 		}
 		
 	}

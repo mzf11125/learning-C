@@ -1,6 +1,8 @@
 package main;
 
 import java.util.Scanner;
+import java.util.*;
+import java.util.;
 
 import client.ClientsData;
 //import 
@@ -17,7 +19,8 @@ public class Main {
 //	}
 	protected String sus;
 	protected String su1s;
-	
+
+
 	Authmain user = new Authmain(sus, su1s);
 	
 	public void display() {
@@ -59,10 +62,6 @@ public class Main {
 		
 	}
 
-	public void master() {
-		
-		
-	}
 
 	public Main() {
 		mainMenu();
