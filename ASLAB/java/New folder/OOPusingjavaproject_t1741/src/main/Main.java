@@ -1,6 +1,8 @@
 package main;
 
 import java.util.Scanner;
+
+import clients.Clients;
 //import 
 
 //import auth.Authmain;
@@ -8,6 +10,7 @@ import java.util.Scanner;
 public class Main {
 
 	Scanner scan = new Scanner(System.in);
+	Clients client = new Clients();
 //
 //	public Main(Scanner scan) {
 //		super();
@@ -54,11 +57,7 @@ public class Main {
 	}
 	
 	public void client() {
-		
-		
-		
-		
-		
+		client.clients();
 	}
 
 	public void master() {
@@ -69,6 +68,7 @@ public class Main {
 	public Main() {
 		mainMenu();	
 	}
+	
 	public static void main(String[] args) {
 		new Main();
 	}
