@@ -34,46 +34,43 @@ Scanner scan = new Scanner (System.in);
 			}
 			else if(input == "channelist" || input == "channels" || input == "chlist") {
 				
-				
-				
-				
 			}
 			else if(input == "/iooisda") {
 				
-				
-				
-				
-				
 			}
-			else if(input == "knodsauiwdi") {
-				
-				
-				
-				
-				
+			else if(input == "") {
 				
 			}	
-			else if(input == "/temp") {
-				
-				
-				
+			else if(input == "clientlist" || input == "clients" || input == "clist") {
 				
 			}
 			else if(input == "?" || input == "help") {
-				
-				
-				
+				System.out.println("Available commands:\r\n"
+						+ "\r\n"
+						+ " > stop, exit, quit, end\r\n"
+						+ "    Stops the application.\r\n"
+						+ "\r\n"
+						+ " > help, ?\r\n"
+						+ "    Shows this help message.\r\n"
+						+ "\r\n"
+						+ " > channellist, channels, chlist\r\n"
+						+ "    Shows a list of all channels.\r\n"
+						+ "\r\n"
+						+ " > clientlist, clients, clist\r\n"
+						+ "    Shows a list of all connected clients.\r\n"
+						+ "\r\n"
+						+ " > addchannel, addchan, addch\r\n"
+						+ "    Adds a channel.\r\n"
+						+ "\r\n"
+						+ " > removechannel, removechan, removech\r\n"
+						+ "    Removes a channel.");
 				
 			}
 			else {
 				System.out.println("Please type a valid input");
 			}
 			
-			
-			
-			
-			
 		}
 	}
 
-}
+
