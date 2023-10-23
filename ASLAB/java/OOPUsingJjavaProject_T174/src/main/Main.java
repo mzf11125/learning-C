@@ -1,27 +1,34 @@
+
+
 package main;
+
 
 import java.util.Scanner;
 import java.util.*;
-import java.;
-
-import client.ClientsData;
+import java.util.Random;
+import java.io.File;
+import client.clientFunction;
 //import 
 
 import auth.Authmain;
+import master.MasterServer;
+import client.clientFunction;
 
 public class Main {
-
+	Random random = new Random();
 	Scanner scan = new Scanner(System.in);
-//
+	clientFunction client = new clientFunction();
+
 //	public Main(Scanner scan) {
 //		super();
 //		this.scan = scan;
 //	}
-	protected String sus;
-	protected String su1s;
+	protected String username;
+	protected String password;
 
 
-	Authmain user = new Authmain(sus, su1s);
+	Authmain user = new Authmain(username, password);
+	MasterServer master = new MasterServer(); 
 	
 	public void display() {
 		System.out.println("███████████████████████████████████████████████\r\n"
@@ -37,32 +44,32 @@ public class Main {
 				+ "3. Exit");
 		System.out.print(">> ");
 	}
-
+	
 	public void mainMenu() {
-		int input;
-		do {
-			display();
-			input = scan.nextInt();scan.nextLine();
-			switch(input) {
-			case 1:
-				master();
-				break;
-			case 2:
-				client();
-				break;
-			case 3:
-				System.exit(0);
-				break;
-			}
-			
-		}while(input > 3 || input <  1);
+		try {
+			int input;
+			do {
+				display();
+				input = scan.nextInt();scan.nextLine();
+				switch(input) {
+				case 1:
+					master.MasterServer1();
+					break;
+				case 2:
+					client.client();
+					break;
+				case 3:
+					System.exit(0);
+					break;
+				}
+				
+			}while(input > 3 || input <  1);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		}
 	}
 	
-	public void client() {
-		
-	}
-
-
 	public Main() {
 		mainMenu();
 		
