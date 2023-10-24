@@ -108,7 +108,8 @@ int main(){
     int score[10] = {20,32,64,58,80};
     int sum = 0;
     for(int i = 0; i < 5; i++){
-        printf("%d ", score[i]);
+        sum+=score[i];//sum = sum + score[i]
     }
+    printf("%d\n", sum);
     return 0;
 }

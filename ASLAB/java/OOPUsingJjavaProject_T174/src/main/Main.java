@@ -2,7 +2,7 @@ package main;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Vector;
+//import java.util.Vector;
 import channel.Channel;
 import channel.ClientChannel;
 import channel.MasterChannel;
