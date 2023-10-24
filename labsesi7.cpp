@@ -5,6 +5,15 @@
 //Passing by value VS reference
 //Recursion
 //Example of Recursion
+int a = 1;
+int b = 3;
+
+
+void function(){
+    printf("%d\n", b);
+}
+
+int addition(int num1, int num2);//Function prototype to declare the function
 
 void HelloWorld(){ // void doesn't return anything
     printf("Hello world!\n");
@@ -13,6 +22,13 @@ void HelloWorld(){ // void doesn't return anything
 void introduce(char name[], int age){
     printf("Nama saya %s umur saya %d\n", name, age);
 }
+
+
+
+
+//Function prototype
+
+
 
 int main(){ //int return a number
     //Function
@@ -23,6 +39,14 @@ int main(){ //int return a number
     //  code
     //}
     //HelloWorld();
-    introduce("Jack", 10);
+    // introduce("Jack", 10);
+    printf("%d\n", addition(5, 8));
+    function();
+
     return 0;    
+}
+
+// initialization
+int addition(int num1, int num2){
+    return num1+num2;
 }
