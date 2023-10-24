@@ -93,5 +93,22 @@ int main(){
     //strncat= string concatenation, combine some character from string two to string one 
     //Binne Smart Kid --> Binne Smart Kid hehe
     strncat(names[0], " hehehe", 5);//Combine Binne and Smart Kid, but only 3 characters from Smart Kid
+    printf("%s\n", names[0]);
+
+    //strcmp= string comparison, compare two strings
+    int result = strcmp("Irene", "Irene");//Compare Binne Smart Kid hehehe and Binne Smart Kid hehehe
+    printf("%d\n", result);//If the result is 0, then the two strings are the same
+    result = strcmp("jono", "budi");
+    printf("%d\n", result);//If the result is 1, then the first string is bigger than the second string
+
+    result = strcmp("budi", "jono");
+    printf("%d\n", result);//If the result is -1, then the first string is smaller than the second string
+
+    //sum of some integer from array of integer
+    int score[10] = {20,32,64,58,80};
+    int sum = 0;
+    for(int i = 0; i < 5; i++){
+        printf("%d ", score[i]);
+    }
     return 0;
 }
