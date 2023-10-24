@@ -49,17 +49,49 @@ int main(){
             if (!numero[i][j])//If the value is 0, then input other ways is if(numero[i][j] == 0) or if(!numero[i][j])
             {
                 scanf("%d ", &numero[i][j]);
-                printf("%d ", numero[i][j]);
+                if(j==3){
+                    printf("%d", numero[i][j]);
+                }
+                else{
+                    printf("%d ", numero[i][j]);
+                }
             }
             else{
-                printf("%d ", numero[i][j]);
+                if(j==3){
+                    printf("%d", numero[i][j]);
+                }
+                else{
+                    printf("%d ", numero[i][j]);
+                }
             }
         }
         printf("\n");
     }
 
+    //Array of string/characters 2D
+    char names[5][20] = {"Irene", "Cassandra", "Amanda", "Bella", "Diana"};//Initialization during declaration
+    //Irene Cassandra Amanda Bella Diana
+    strcpy(names[2], "samuel");//Initialization after declaration   
+    for(int i = 0; i <= 2; i++){
+        printf("%s\n", names[i]);
+    }
 
+    //string.h library
 
+    //strlen
+    int len = strlen(names[0]);//Length of Irene
+    printf("%d\n", len);
+    //strcpy= string copy some characters from one string to another
+    strncpy(names[0], "Binus University", 3);//Copy 3 characters from Irene to names[0], format of strncpy(destination, source, number of characters)
+    printf("%s\n", names[0]);
 
+    //strcat= string concatenation, combine two strings
+    //Binne --> Binne smart kid
+    strcat(names[0], " Smart Kid");//Combine Binne and Smart Kid
+    printf("%s\n", names[0]);
+
+    //strncat= string concatenation, combine some character from string two to string one 
+    //Binne Smart Kid --> Binne Smart Kid hehe
+    strncat(names[0], " hehehe", 5);//Combine Binne and Smart Kid, but only 3 characters from Smart Kid
     return 0;
 }
