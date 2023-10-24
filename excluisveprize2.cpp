@@ -26,7 +26,7 @@ int main(){
     // Loop through the prize array and find the element with the highest value
     for (int i = 1; i <= 1000; i++)
     {
-        // If the current element has a higher value than the current max, or if it has the same value but a lower index, update the max and maxIndex variables
+        // If the current element has a higher value than the current max
         if((prize[i]>max)){
             max = prize[i];
         }
