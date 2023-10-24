@@ -7,7 +7,7 @@
 // This is the main function where the program execution starts
 int main(){
     // Initialize an array of 1001 elements with all elements set to 0
-    int prize[1001] = {0}, n, max = 0, maxIndex = 0, temp = 0;
+    int prize[1001] = {0}, n, max = 0, temp = 0;
 
     // Loop through the array and set all elements to 0
     for (int i = 0; i<=1000; i++){
