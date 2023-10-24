@@ -27,14 +27,13 @@ int main(){
     for (int i = 1; i <= 1000; i++)
     {
         // If the current element has a higher value than the current max, or if it has the same value but a lower index, update the max and maxIndex variables
-        if((prize[i]>max) || (prize[i]==max && i<maxIndex)){
+        if((prize[i]>max)){
             max = prize[i];
-            maxIndex = i;
         }
     }
 
     // Print the index of the element with the highest value in the prize array
-    printf("%d\n", maxIndex);
+    printf("%d\n", max);
 
     // Return 0 to indicate successful program execution
     return 0;
