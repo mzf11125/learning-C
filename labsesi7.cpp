@@ -10,7 +10,9 @@ int b = 3;
 
 
 void function(){
-    printf("%d\n", b);
+    // printf("%d\n", b);
+    char name[100]="Adrian";
+    printf("%s\n", name);
 }
 
 int addition(int num1, int num2);//Function prototype to declare the function
