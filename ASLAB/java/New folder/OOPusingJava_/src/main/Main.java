@@ -12,17 +12,14 @@ import main.Customer;
 import main.Saloon;
 
 public class Main {
-	Saloon saloon = new Saloon();
+	String name;
+	int number1;
+	int number2;
+	Saloon saloon = new Saloon(name, number1, number2);
 	Customer customer = new Customer();
 	File f = new File("src/highscore.txt");
-	Scanner scan = new Scanner(System.in); 
-	
+	Scanner scan = new Scanner(System.in); 	
 	Vector<String> highScores = new Vector<>();
-	
-	
-
-
-	
 	public Main() {
 		menu();
 	}
@@ -35,7 +32,7 @@ public class Main {
         	try {
 				f.createNewFile();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}	
         	return;
