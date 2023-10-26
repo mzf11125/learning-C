@@ -29,10 +29,10 @@ void newRecord() {
     char number[20];
 
     printf("Enter the name you want to add: ");
-    scanf("%19s", name);
+    scanf("%[^\n]", name);getchar();
 
     printf("Enter the number you want to add: ");
-    scanf("%19s", number);
+    scanf("%19s", number);getchar();
 
     fprintf(file, "Name: %s, Number: %s\n", name, number);
     printf("Record added sucessfully :)\n");
@@ -44,7 +44,7 @@ void search() {
 	displayFile();
     char name[20];
     printf("Enter the name you want to search for(Case sensitive): ");
-    scanf("%19s", name);
+    scanf("%[^\n]", name);getchar();
 
     FILE* file = fopen("phonebook.txt", "r");
     if (!file) {
@@ -74,7 +74,7 @@ void deleteRecord() {
 
     char name[20];
     printf("Enter the name you want to delete: ");
-    scanf("%19s", name);
+    scanf("%[^\n]", name);
 
     FILE* file = fopen("phonebook.txt", "r");
     if (!file) {
@@ -116,7 +116,7 @@ void modifyPhoneNumber() {
 
     char name[20];
     printf("Enter the name you want to modify: ");
-    scanf("%19s", name);
+    scanf("%[^\n]", name);
 
     FILE* file = fopen("phonebook.txt", "r");
     if (!file) {
@@ -167,7 +167,7 @@ int main() {
         puts("3. Modify a phone number.");
         puts("4. Delete a record.");
         puts("5. Exit");
-        scanf("%d", &input);
+        scanf("%d", &input);getchar();
 
         switch (input) {
             case 1:
