@@ -22,11 +22,10 @@ int main() {
                 breath--;
             }
 
-            if (breath == 0) {
-                if (stairs == 0) {
+            if (breath == 0 && stairs == 0) {
                     alive = 0;
                     break;
-                } else if (i + 1 < N) {
+                if (i + 1 < N) {
                     breath = K;
                 }
             }
