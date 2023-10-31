@@ -5,9 +5,12 @@ int main() {
     scanf("%d", &T);
 
     for (i = 0; i < T; i++) {
-        int X, P;
-        scanf("%d %d", &X, &P);
-
+        int num;
+        scanf("%d", &num);
+        for (int j = 0; j < num; j++){
+            char S[100];
+            scanf("%s", S);
+        }
         int bit = (X >> P) & 1;
 
         printf("%d\n", bit);

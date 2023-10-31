@@ -25,7 +25,8 @@ int isValidIPv10(const char *s) {
         }
     }
 
-    return (dots == 4 && nums == 4) ? 1 : 0;  // Corrected condition for IPv4
+    return (dots == 4 && nums == 4) 
+    ? 1 : 0;  // There should be 4 numbers
 }
 
 int main() {
