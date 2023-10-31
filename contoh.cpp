@@ -4,7 +4,7 @@
 
 int main(){
 
-    itnt t, n , k, petak[10001];
+    int t, n , k, petak[10001];
 
     scanf("%d", &t); getchar();
 
@@ -15,7 +15,7 @@ int main(){
         for int j = 0; j < n; j++){
             if (petak[j] == 1)
             {
-                start = j;
+                int start = j;
                 break;
             }
         }
@@ -26,6 +26,8 @@ int main(){
                 break;
             }
         }
+
+        if(start != end && start<k){}
 
         int count = 0;
     }
