@@ -9,7 +9,7 @@ int main(){
     for(int i = 1; i <= t; i++){
         
         int loop;
-        scanf("%d", &loop); getchar();
+        scanf("%d", &loop);
         
         long long *house = (long long*) malloc(loop * sizeof(long long)); //
         long long min = 2e9;//2 billion = 2 * 10^9
@@ -20,13 +20,13 @@ int main(){
         }
         
         for(int j = 0; j < loop-1; j++){
-            if(house[j] > house[j + 1]){
+            if(house[j] >= house[j + 1]){
                 temp = house[j] - house[j + 1];
             }
             else if(house[j] < house[j + 1]){
                 temp = house[j + 1] - house[j];
             }
-             if (min > temp){
+            if (min > temp){
                     min = temp;
                 }
         }
