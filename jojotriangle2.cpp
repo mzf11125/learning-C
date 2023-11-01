@@ -22,9 +22,9 @@ int main() {
     while (T--) {
         scanf("%d", &X); 
         drawIsoscelesTriangle(X);
-        if (T > 0) {
-            printf("\n"); 
-        }
+        // if (T > 0) {
+        //     printf("\n"); 
+        // }
     }
 
     return 0;
