@@ -4,7 +4,7 @@
 int all_number_or_char(const char S[]) {
     int n = strlen(S);
     for (int i = 0; i < n; i++) {
-        if (!((S[i] >= '0' && S[i] <= '9') || (S[i] >= 'a' && S[i] <= 'z') || (S[i] >= 'A' && S[i] <= 'Z')) {
+        if (!((S[i] >= '0' && S[i] <= '9') || (S[i] >= 'a' && S[i] <= 'z') || (S[i] >= 'A' && S[i] <= 'Z'))){
             return 0; // False
         }
     }

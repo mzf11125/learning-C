@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void changeLetterCapitalization(char* string, char N) {
-    for (int i = 0; string[i] != '\0'; i++) {
+    for (int i = 0; string[i] != '\0'; i++) {//Scan until the end of the string. \0 is the null character, which is the last character of a string
         if (string[i] == N) {
             if (N >= 'a' && N <= 'z') {
                 string[i] = N - 'a' + 'A'; // Change lowercase to uppercase
