@@ -6,11 +6,11 @@ void word(int number){
     char word = 'a';
     for (int i = 0; i < number; i++)
     {
-        printf("%c", word);  
-        word++; 
-    }
-}
+        printf("%c", word);
+        word++;
 
+    }   
+}
 
 int main(){
     int T;
@@ -19,10 +19,8 @@ int main(){
     {
         int number;
         scanf("%d", &number);
-        if(number >= 1 && number <= 27){
-            printf("Case #%d: ", i+1);   
-            word(number);
-        }
+        printf("Case #%d: ", i+1);   
+        word(number);
         printf("\n");
     }
 
