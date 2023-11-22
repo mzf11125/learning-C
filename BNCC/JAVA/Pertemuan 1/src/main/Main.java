@@ -20,6 +20,7 @@ public class Main {
 		Double wrapDouble;
 		Character wrapChar;
 		Boolean wrapBool;
+		saya ubah;
 	}
 
 	public static void main(String[] args) {
