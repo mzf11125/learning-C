@@ -1,8 +1,15 @@
 package main;
 
+import java.io.InputStream;
+import java.util.Scanner;
+
 public class Main {
 
 	public static int nomor = 5;
+	//Global variable
+	int a = 10;
+	
+	static Scanner scan = new Scanner(System.in);
 	
 	public Main() {
 		
@@ -20,13 +27,41 @@ public class Main {
 		Double wrapDouble;
 		Character wrapChar;
 		Boolean wrapBool;
-		saya ubah;
+		formulir();
+
+		
+//		System.out.println(kondisi);
+//		System.out.println(angkadesimal);
+//		System.out.println(kondisi);
+//		System.out.println(angkabulat + "%-10" + angkadesimal);
+//		saya ubah;
 	}
+
+	
 
 	public static void main(String[] args) {
 		new Main();
 		
 
+	}
+	
+	public void formulir() {
+		System.out.print("Masukan nama mu: ");
+		String nama = scan.nextLine();
+		System.out.print("Masukan umur mu: ");
+		int umur = scan.nextInt();
+		scan.nextLine();
+		System.out.println("Halo " + nama + ", selamat sepuh sudah berumur " + umur + " tahun");
+	}
+	
+	public void methodA() {
+		int a = 8;
+		this.a = 5;
+		methodB();
+	}
+	
+	public void methodB() {
+		a = 1;
 	}
 
 }
