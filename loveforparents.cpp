@@ -1,5 +1,3 @@
-//love for parents .cpp by Muhammad Zidan Fatonie
-
 #include <stdio.h>
 
 int main(){
