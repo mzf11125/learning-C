@@ -6,13 +6,13 @@ import java.util.Scanner;
 public class Main {
 
 	public static int nomor = 5;
-	//Global variable
+	// Global variable
 	int a = 10;
-	
+
 	static Scanner scan = new Scanner(System.in);
-	
+
 	public Main() {
-		
+
 //		System.out.println("Hello world!");
 //		primitive data
 //		int whatisthis = angkabulat%10;
@@ -21,30 +21,76 @@ public class Main {
 		char karakter = 'a';
 		boolean kondisi = 10 == 8;
 //		System.out.println(whatisthis);
-		
-		//Wrapper class
+
+		// Wrapper class
 		Integer wrapInt;
 		Double wrapDouble;
 		Character wrapChar;
 		Boolean wrapBool;
 		formulir();
-
 		
 //		System.out.println(kondisi);
 //		System.out.println(angkadesimal);
 //		System.out.println(kondisi);
 //		System.out.println(angkabulat + "%-10" + angkadesimal);
 //		saya ubah;
-	}
+		
+//		if(kondisi) {
+//			System.out.println("Kondisi True");
+//		}
+//		else if(10 < 11) {
+//			System.out.println("10 Kurang dari 11");
+//		}
+//		else{
+//			System.out.println("kondisi false");
+//		}
+		
+//		int choose = 0;
+//		
+//		System.out.println("Choose 1-3");
+//		choose = scan.nextInt();
+//		try {
+//			switch (choose) {
+//			case 1: {
+//				
+//				yield type;
+//				
+//				break;
+//			}
+//			case 2: {
+//				
+//				break;
+//			}
+//			default:
+//				throw new IllegalArgumentException("Unexpected value: " + key);
+//			}
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 
-	
+//		While loop
+		int i = 0;
+		while (i>10) {
+			System.out.print("While loop");
+			i++;
+		}
+		
+		int j = 0;
+		do {
+			System.out.println("Do While loop");
+			j++;
+		} while (j<10);
+		for(int k = 0; k < 10; k++) {
+			System.out.println("For loop");
+		}
+	}
 
 	public static void main(String[] args) {
 		new Main();
-		
 
 	}
-	
+
 	public void formulir() {
 		System.out.print("Masukan nama mu: ");
 		String nama = scan.nextLine();
@@ -53,13 +99,13 @@ public class Main {
 		scan.nextLine();
 		System.out.println("Halo " + nama + ", selamat sepuh sudah berumur " + umur + " tahun");
 	}
-	
+
 	public void methodA() {
 		int a = 8;
 		this.a = 5;
 		methodB();
 	}
-	
+
 	public void methodB() {
 		a = 1;
 	}
