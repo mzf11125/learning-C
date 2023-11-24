@@ -16,18 +16,23 @@ public class Main {
 //		System.out.println("Hello world!");
 //		primitive data
 //		int whatisthis = angkabulat%10;
-		int angkabulat = 5;
-		double angkadesimal = 3.1415;
-		char karakter = 'a';
-		boolean kondisi = 10 == 8;
+//		int angkabulat = 5;
+//		double angkadesimal = 3.1415;
+//		char karakter = 'a';
+//		boolean kondisi = 10 == 8;
+//		
+//		long angkaLong = 9_000_000_000_000_000_000L;
+//		
+//		float angkaFloat = 3.1415F;
+		
 //		System.out.println(whatisthis);
 
 		// Wrapper class
-		Integer wrapInt;
-		Double wrapDouble;
-		Character wrapChar;
-		Boolean wrapBool;
-		formulir();
+//		Integer wrapInt;
+//		Double wrapDouble;
+//		Character wrapChar;
+//		Boolean wrapBool;
+//		formulir();
 		
 //		System.out.println(kondisi);
 //		System.out.println(angkadesimal);
@@ -70,19 +75,53 @@ public class Main {
 //		}
 
 //		While loop
-		int i = 0;
-		while (i>10) {
-			System.out.print("While loop");
-			i++;
-		}
+//		int i = 0;
+//		while (i>10) {
+//			System.out.print("While loop");
+//			i++;
+//		}
+//		
+//		int j = 0;
+//		do {
+//			System.out.println("Do While loop");
+//			j++;
+//		} while (j<10);
+//		for(int k = 0; k < 10; k++) {
+//			System.out.println("For loop");
+//		}
 		
-		int j = 0;
-		do {
-			System.out.println("Do While loop");
-			j++;
-		} while (j<10);
-		for(int k = 0; k < 10; k++) {
-			System.out.println("For loop");
+
+		int choose = 0;
+		System.out.println("Program cek angka");
+		System.out.println("1. Input angka");
+		System.out.println("2. Print hasil");
+		System.out.println("3. Exit");
+		choose = scan.nextInt();
+		scan.nextLine();
+		while (choose<=3 && choose >= 1) {
+			try {
+				switch (choose) {
+				case 1: {
+					System.out.println("Masukan angka genap");
+					int angka = scan.nextInt();
+					cekAngka();
+					break;
+				}
+				case 2: {
+					
+					break;
+				}
+				case 3: {
+					System.exit(0);
+					break;
+				}
+				default:
+					throw new IllegalArgumentException("Unexpected value: " + choose);
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 
@@ -109,5 +148,12 @@ public class Main {
 	public void methodB() {
 		a = 1;
 	}
+	
+	public void cekAngka() {
+		
+		
+	}
+	
+	
 
 }
