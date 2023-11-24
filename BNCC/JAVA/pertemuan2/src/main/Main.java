@@ -1,5 +1,6 @@
 package main;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -69,7 +70,8 @@ public class Main {
 		int rand4 = (int)(Math.random() * 16 + 5);//Angka kali + 1
 		System.out.println("angka bulat random (5 - 15): " + rand4); //Buletin ke bawah
 		
-		
+		Random random = new Random();//Using library
+		System.out.println(random.nextInt(20));
 		
 	}
 	
