@@ -136,6 +136,6 @@ public class Main {
 		System.out.println(string.substring(6));
 		System.out.println(string.substring(0, 4));
 
-		
+		scan.close();
 	}
 }

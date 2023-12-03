@@ -1,0 +1,289 @@
+import { useState, useEffect } from "react";
+import {
+  getCategoryById,
+  getCategoriesFilter,
+  getCategoryPrice,
+  getArea,
+} from "src/api/vendor-filter";
+import { getCategory } from "src/api/categories";
+import SkeletonLoader from "@components/SkeletonLoader";
+import { useRouter } from "next/router";
+import axios from "axios";
+import { API_URL } from "src/helpers/network";
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
+import ReactPaginate from "react-paginate";
+import Link from "next/link";
+import Dropdown from "@components/elements/Dropdown";
+import back from "../../../public/arrowLeft.png";
+import Image from "next/image";
+import VendorCard from "@components/elements/vendor/VendorCard";
+import RangeSlider from "@components/elements/Rangeslider";
+
+export default function Page({ id }) {
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const { sort } = router.query;
+  const [vendors, setVendors] = useState([]);
+  const [datas, setData] = useState([]);
+  const [filterPrice, setFilterPrice] = useState([]);
+  const [sortBy, setSortBy] = useState(sort || "asc");
+  const [area_id, setArea_id] = useState(1);
+  const [minPrice, setMinPrice] = useState(100000);
+  const [maxPrice, setMaxPrice] = useState(300000);
+  const [filteredData, setFilteredData] = useState([]);
+  const [area, setArea] = useState([]);
+  const [totalPages, setTotalPages] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [category, setCategory] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [areaCategory, setAreaCategory] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [error, setError] = useState(null); // Declare the error state variable and its setter
+
+  //console.log("datas", datas); 
+
+  const getCategories = async () => {
+    setLoading(true);
+    try {
+      const { data } = await getCategoryById(
+        id,
+        currentPage,
+        areaCategory,
+        area_id,
+        sortBy,
+        minPrice,
+        maxPrice
+      );
+      setData(data);
+      setTotalPages(data?.last_page);
+    } catch (error) {
+      setError("An error occurred while fetching data.");
+    } finally {
+      setLoading(false); // Setelah selesai, hentikan loading
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, [currentPage, areaCategory, area_id, sortBy, minPrice, maxPrice]);
+
+  const getDropDownCategories = async () => {
+    const { data } = await getCategory();
+    setCategory(data);
+  };
+  useEffect(() => {
+    getDropDownCategories();
+  }, []);
+//   useEffect(() => {
+//   if (filteredData?.category?.name) {
+//     document.title = filteredData.category.name;
+//   }
+// }, [filteredData?.category?.name]);
+
+  const getPrice = async () => {
+    const { data } = await getCategoryPrice(id, sortBy);
+    setFilterPrice(data);
+  };
+  useEffect(() => {
+    getPrice();
+  }, [sortBy]);
+
+  const getAreaLocation = async () => {
+    const { data } = await getArea(id, area_id);
+    setArea(data);
+  };
+  useEffect(() => {
+    getAreaLocation();
+  }, [area_id]);
+
+  const getCategoriesRoute = async () => {
+    try {
+      const { data } = await getCategoriesFilter(areaCategory);
+      setCategories(data);
+    } catch (error) {
+      // Handle errors
+      console.error("Error fetching categories:", error);
+    }
+  };
+  useEffect(() => {
+    getCategoriesRoute(); // Call the function to fetch categories
+  }, [areaCategory]);
+
+  const sortPrice = () => {
+    axios
+      .get(
+        API_URL +
+          `/vendor/filter?category_id=${id}&pmin=${minPrice}&pmax=${maxPrice}}`
+      )
+      .then((resp) => setFilteredData(resp.data))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    sortPrice();
+  }, [minPrice, maxPrice]);
+
+  useEffect(() => {
+    // Filter data based on the selected price range
+    const filtered = datas?.data?.filter(
+      (item) => item.min_price >= minPrice && item.min_price <= maxPrice
+    );
+    setFilteredData(filtered);
+  }, [minPrice, maxPrice]);
+
+  const handleSortChange = (e) => {
+    const selectedSortBy = e.target.value;
+    setSortBy(selectedSortBy);
+  };
+
+  const handleAreaChange = (e) => {
+    const newSelectedArea = e.target.value;
+    setArea_id(newSelectedArea);
+  };
+
+  const handleRouteAreaChange = async (e) => {
+    const selectedAreaId = e.target.value;
+    setAreaCategory(selectedAreaId);
+    router.push(`/categories/${selectedAreaId}`);
+  };
+
+  const handlePageClick = (selectedPage) => {
+    setCurrentPage(selectedPage.selected + 1);
+  };
+
+
+  useEffect(() => {
+    if (filteredData?.category?.name) {
+      document.title = filteredData.category.name;
+    }
+  }, [filteredData?.category?.name]);
+
+  return (
+    <>
+      <Navbar />
+      <div className="px-5 lg:px-[90px]">
+        <div className="py-24">
+          <div className="flex items-center w-[23%] cursor-pointer">
+            <div className="w-[42px]">
+              <Image src={back} alt="back-button" />
+            </div>
+            <Link href="/">
+              <a className="text-[22px] font-[400] text-[#9E9E9E]">Kembali</a>
+            </Link>
+          </div>
+          <div className="flex items-center justify-center">
+            <h1 className="text-3xl font-bold font-plus-jakarta">
+              {filteredData?.category?.name}
+            </h1> 
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-between gap-5 mt-10 mb-12">
+          <div className="flex gap-[20px] flex-1">
+            <div className="w-1/2 lg:w-1/3">
+              <select
+              value={`${areaCategory}${selectedCategory}`}
+              onChange={handleRouteAreaChange}
+              className="px-5 py-3 border border-solid rounded-full border-state/gray text-[#9E9E9E]">
+              {category?.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name}
+                </option>
+            ))}
+              </select>
+            </div>
+            <div className="hidden w-1/3 lg:block">
+              <RangeSlider
+                min={100000}
+                max={500000}
+                step={100}
+                minPrice={minPrice}
+                maxPrice={maxPrice}
+                setMinPrice={setMinPrice}
+                setMaxPrice={setMaxPrice}
+              />
+            </div>
+            <div className="w-1/2 lg:w-1/3">
+              <select
+                value={area_id}
+                onChange={handleAreaChange}
+                className="px-5 py-3 border border-solid rounded-full border-state/gray text-[#9E9E9E]">
+                <option value={[1]}>{datas?.data?.[1]?.area}</option>
+                <option value={[2]}>{datas?.data?.[3]?.area}</option>
+              </select>
+            </div>
+          </div>
+          <div className="w-full my-5 lg:hidden">
+            <RangeSlider
+              min={100000}
+              max={500000}
+              step={100}
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              setMinPrice={setMinPrice}
+              setMaxPrice={setMaxPrice}
+            />
+          </div>
+          <div className="w-full lg:w-auto">
+            <select
+              value={sortBy}
+              onChange={handleSortChange}
+              className="px-5 py-3 border border-solid rounded-full border-state/gray text-[#9E9E9E]">
+              <option value="asc">Terendah</option>
+              <option value="desc">Tertinggi</option>
+            </select>
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-center gap-5 md:justify-between">
+          {loading ? ( // Show SkeletonLoader when loading state is true
+            <SkeletonLoader />
+          ) : (
+            <>
+              {datas?.data?.map((item, index) => (
+                <VendorCard
+                  id={item.id}
+                  key={index}
+                  title={item.name}
+                  area={item.area}
+                  logo={item.logo}
+                  category={item.category}
+                  price={item.min_price}
+                />
+              ))}
+            </>
+          )}
+        </div>
+        <div className="p-20">
+          <ReactPaginate
+            previousLabel={"<"}
+            nextLabel={">"}
+            pageCount={totalPages}
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            marginPagesDisplayed={2}
+            containerClassName={
+              "pagination w-full flex justify-center gap-[13px] text-secondary/base font-[700]"
+            }
+            previousClassName="py-[8px] px-[15px]"
+            nextClassName="py-[8px] px-[15px]"
+            pageClassName="py-[8px] px-[15px]"
+            activeClassName={
+              "text-[white] py-[8px] px-[15px] bg-secondary/base rounded-[5px]"
+            }
+          />
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+export async function getServerSideProps(ctx) {
+  const id = ctx.query.id;
+  // console.log(id);
+
+  return {
+    props: {
+      id,
+    },
+  };
+}

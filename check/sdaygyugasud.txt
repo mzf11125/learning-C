@@ -1,0 +1,43 @@
+import Image from "next/image";
+import { useState, useEffect } from 'react';
+
+const SkeletonLoader = () => {
+  return (
+    <div className="w-[260px] h-[260px] lg:w-[550px] lg:h-[550px] bg-gray-300 rounded-full"></div>
+  );
+};
+
+export default function HeroContainer() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate a 2-second loading delay
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    // Cleanup function to clear the timeout in case the component unmounts
+    return () => clearTimeout(timeoutId);
+  }, []); // Empty dependency array means this effect runs once when the component mounts
+
+  return (
+    <div className="w-full h-full py-20 lg:py-24 font-plus-jakarta container mx-auto relative">
+      <img src="/common/glow.png" className="absolute top-1/2 bottom-1/2 -translate-y-1/2 -left-10 -z-10 lg:hidden" />
+        </div>
+        <div className="w-fit relative">
+          <img src="/landing/hero-pic-border.png" className="w-[285px] h-[285px] lg:w-[600px] lg:h-[600px]" />
+          {loading ? (
+            <SkeletonLoader />
+          ) : (
+            <img
+              src="https://placekitten.com/260/260"
+              className="absolute w-[260px] h-[260px] lg:w-[550px] lg:h-[550px] top-1/2 bottom-1/2 -translate-y-1/2 right-1/2 left-1/2 -translate-x-1/2 rounded-full"
+            />
+          )}
+          {/* <SkeletonLoader /> */}
+          {loading ? null : (
+            <img src="https://placekitten.com/260/260" className="absolute w-[260px] h-[260px] lg:w-[550px] lg:h-[550px] top-1/2 bottom-1/2 -translate-y-1/2 right-1/2 left-1/2 -translate-x-1/2 rounded-full" />
+          )}
+          <img src="/common/twinkle.png" className="w-[30px] h-[30px] lg:w-[78px] lg:h-[78px] absolute top-0 -right-5 lg:-right-10" />
+          <img src="/common/twinkle.png" className="w-[30px] h-[30px] lg:w-[78px] lg:h-[78px] absolute bottom-0 -left-5 lg:-left-10" />
+        </div>
