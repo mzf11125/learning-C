@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Fungsi untuk menghitung faktorial dengan modulo
+
 long long faktorial(int n, int mod) {
     if (n == 0 || n == 1) {
         return 1;
@@ -10,11 +10,11 @@ long long faktorial(int n, int mod) {
 }
 
 int main() {
-    int t; // Jumlah kasus uji
+    int t; 
     scanf("%d", &t);
 
     for (int i = 1; i <= t; i++) {
-        int n; // Jumlah elemen
+        int n; 
         scanf("%d", &n);
 
         if (n < 1 || n > 100) {
