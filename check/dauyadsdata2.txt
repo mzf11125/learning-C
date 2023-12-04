@@ -1,0 +1,424 @@
+Analisis terhadap Artificial Intelligence sebagai Subjek Hukum Pidana
+Itok Dwi Kurniawan1
+1Fakultas Hukum Universitas Sebelas Maret
+* Correspondence e-mail; itokdwikurniawan@staff.uns.ac.id
+Abstract
+This article discusses issues related to the existence of artificial intelligence as a legal
+subject, and criminal liability when artificial intelligence commits criminal acts. The
+purpose of this study is to find out the categorization of artificial intelligence as a legal
+object or legal subject, and to find out to whom criminal responsibility is assigned when
+artificial intelligence commits a crime. The research method used in writing this article is
+normative legal research, with a conceptual approach. The results of this study are that
+artificial intelligence is not a legal subject, because the actions carried out by artificial
+intelligence are only orders from its users, and for criminal acts committed by artificial
+intelligence, those who must be responsible are the creators of artificial intelligence or users
+of artificial intelligence
+Keywords: Artificial intelligence; criminal law; legal subject
+Abstrak
+Artikel ini membahas permasalahan terkait eksistensi dari kecerdasan buatan sebagai subjek
+hukum, dan pertanggungjawaban pidana ketika kecerdasan buatan melakukan perbuatan
+pidana. Tujuan penelitian ini adalah untuk mengetahui kategorisasi dari kecerdasan buatan
+sebagai objek hukum ataukan subjek hukum, dan untuk mengetahui kepada siapakah
+pertanggungjawaban pidana dibebankan ketika kecerdasan buatan melakukan tindak pidana.
+Metode penelitian yang digunakan dalam penulisan artikel ini adalah penelitian hukum
+normatif, dengan pendekatan konseptual. Hasil dari penelitian ini adalah kecerdasan buatan
+bukanlah subjek hukum, oleh karena perbuatan yang dilakukan oleh kecerdasan buatan
+hanyalah merupaka perintah dari penggunanya, dan terhadap perbuatan pidana yang
+dilakukan oleh kecerdasan buatan maka yang harus bertanggungjawab adalah pencipta
+kecerdasan buatan atau pengguna kecerdasan buatan.
+Kata kunci: Hukum pidana; Kecerdasan buatan; Subjek hukum
+PENDAHULUAN
+Kemajuan peradaban manusia di era modern ditandai dengan semakin
+berkembangnya ilmu pengetahuan dan teknologi sebagai hasil dari kebudayaan manusia
+modern. Ilmu pengetahuan dan teknologi berkembang pesat di era ini, dan membuat hidup
+manusia lebih mudah dan lebih praktis. Aktivitas manusia dalam melakukan pekerjaan
+Itok Dwi Kurniawan:
+Analisis terhadap Artificial Intelligence sebagai Subjek Hukum Pidana
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|36
+sehari-hari menjadi lebih efektif dan efisien dengan adanya alat-alat yang dihasilkan dari
+kecerdasan manusia.
+Teknologi yang berkembang sebagai alat bantu kehidupan manusia kini semakin
+beragam, mulai dari alat yang sederhana hingga alat yang canggih. Alat-alat tersebut dapat
+membantu aktivitas sehari-hari masyarakat, mulai dari yang sederhana hingga yang
+kompleks. Semua alat tersebut membantu berbagai profesi manusia seperti internet of things
+(IoT), blockchain, big data, dan artificial intelligence yang telah banyak berkontribusi bagi
+kehidupan manusia di era modern ini, bahkan fenomena ini melahirkan apa yang dikenal
+dengan era revolusi industri 4.0.
+1
+Salah satu dari beberapa alat hasil perkembangan teknologi yang saat ini banyak
+diperbincangkan adalah kecerdasan buatan. Kecerdasan buatan adalah sistem teknologi yang
+diprogram untuk memecahkan masalah atau melakukan sesuatu dengan cara berpikir dan
+bertindak seperti manusia.
+2 Ed Burns, dkk dalam tulisan berjudul What is Artificial
+Intelligence? bahwa Kecerdasan Buatan adalah simulasi proses kecerdasan manusia oleh
+mesin, khususnya sistem komputer. Aplikasi khusus kecerdasan buatan mencakup sistem
+pakar, pemrosesan bahasa alami, pengenalan suara, dan visi mesin.
+3 Kecerdasan buatan
+memiliki ciri-ciri memiliki kemampuan yang baik untuk memahami dan mengambil
+keputusan untuk mencapai suatu tujuan dengan cepat dan tepat. Berdasarkan
+kemampuannya, tidak berlebihan jika kecerdasan buatan saat ini dijuluki sebagai motor
+penggerak revolusi industri 4.0, dan kondisi saat ini telah memasuki masa disrupsi
+kecerdasan buatan.
+Pesatnya perkembangan teknologi saat ini telah menggeser prinsip kerja kecerdasan
+buatan. Pada awalnya kecerdasan buatan diciptakan untuk membantu pekerjaan manusia,
+kini kecerdasan buatan telah mampu tidak hanya membantu pekerjaan manusia, tetapi
+menggantikan pekerjaan manusia. Kecerdasan buatan sebagai teknologi berupa mesin yang
+dapat meniru perilaku manusia, memiliki kemampuan berpikir dan memiliki pengetahuan
+seperti manusia dapat melakukan tata cara berpikir seperti manusia.
+4 Berdasarkan
+kemampuan berpikir yang dimilikinya, kecerdasan buatan mampu menggantikan pekerjaan
+manusia, salah satunya Google Translate yang diciptakan oleh perusahaan raksasa Google,
+yang memiliki kemampuan menerjemahkan bahasa lebih kompeten, dan lebih cepat dari
+1 Qur’ani Dewi Kusumawardani, “HUKUM PROGRESIF DAN PERKEMBANGAN TEKNOLOGI
+KECERDASAN BUATAN,” Veritas et Justitia 5, no. 1 (June 26, 2019): 166–190, accessed August 18,
+2023, https://journal.unpar.ac.id/index.php/veritas/article/view/3270.
+2 FL. Yudhi Priyo Amboro and Khusuf Komarhana, “PROSPEK KECERDASAN BUATAN
+SEBAGAI SUBJEK HUKUM PERDATA DI INDONESIA [PROSPECTS OF ARTIFICIAL
+INTELLIGENCE AS A SUBJECT OF CIVIL LAW IN INDONESIA],” Law Review 21, no. 2 (2021): 145–
+172, https://ojs.uph.edu/index.php/LR/article/view/3513.
+3 Ed Burns, “What Is Artificial Intelligence and How Does AI Work?,” TechTarget, accessed
+August 18, 2023, https://www.techtarget.com/searchenterpriseai/definition/AI-Artificial-Intelligence.
+4 Naiman Fahrudin, “PENERAPAN METODE FINITE STATE MACHINE PADA GAME
+ADVENTURE ‘FRANCO,’” JATI (Jurnal Mahasiswa Teknik Informatika) 2, no. 1 (March 2, 2018): 446–
+453, accessed August 18, 2023, https://ejournal.itn.ac.id/index.php/jati/article/view/1703.
+Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, Vol 1, No 1, Juli 2023
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|37
+manusia. Tidak hanya itu, Google Translate juga memahami ratusan bahasa dari negaranegara di seluruh dunia.
+Kemampuan yang dimiliki kecerdasan buatan tidak hanya mumpuni di bidang
+bahasa, namun salah satunya juga dapat diterapkan di bidang hukum. Salah satu contohnya
+kecerdasan buatan yang berhasil dikembangkan oleh negara Tiongkok yaitu pada tahun 2017
+telah mengembangkan kecerdasan buatan hakim. Hakim kecerdasan buatan ini mampu
+mengadili kasus seperti hakim sesungguhnya, meski terbatas pada sengketa hak cipta,
+sengketa klaim liabilitas produk e-commerce, dan sengketa jual beli online.
+5
+(Sihombing &
+Syaputra, 2020). Selain profesi hakim, kecerdasan buatan di bidang hukum juga diterapkan
+pada profesi advokat yang melakukan pekerjaan bantuan hukum. Di Inggris, ada pemberian
+bantuan hukum, yakni hadirnya obrolan DoNotPay karena telah melayani lebih dari 1.000
+bantuan hukum. Hal itu menunjukkan bahwa lebih dari 160.000 orang telah dibantu oleh
+kecerdasan buatan dalam menyelesaikan masalah hukum.
+6
+Bukti nyata terkait penggantian pekerjaan manusia dengan kecerdasan buatan
+menunjukkan bahwa kemampuan kecerdasan buatan sudah tidak diragukan lagi bahkan
+mampu melampaui kecerdasan manusia. Dengan kata lain, kecerdasan buatan tidak lagi
+terbatas pada suatu objek yang akan bekerja jika diperintahkan oleh manusia, melainkan
+kecerdasan buatan yang dapat melakukan segala tindakan secara otomatis seolah-olah
+seperti manusia. Fenomena ini tentunya akan berimplikasi hukum terkait dengan
+kemampuan kecerdasan buatan untuk melakukan hal-hal seperti tindakan manusia.
+Pertanyaan yang sering muncul dalam menyikapi subjek kecerdasan buatan adalah
+terkait keberadaan kecerdasan buatan, sebagai objek hukum atau sebagai subjek hukum?
+Jika kita melakukan penelusuran untuk menjawab permasalahan tersebut dalam hukum
+positif negara Indonesia, kecerdasan buatan ini dikategorikan sebagai objek hukum dan
+bukan subjek hukum. Hal ini tentu saja menimbulkan pertanyaan lebih lanjut yang
+mempersoalkan kemampuan bertindak yang dimiliki oleh kecerdasan buatan, apakah pantas
+untuk dijadikan objek saja?
+Berdasarkan kemampuan untuk melakukan tindakan membantu atau menggantikan
+pekerjaan manusia, kecerdasan buatan layak untuk dikategorikan sebagai subjek hukum.
+Apalagi jika kecerdasan buatan melakukan perbuatan yang termasuk dalam perbuatan
+hukum, tentu saja hal itu dikenakan tanggung jawab hukum. Kedudukan kecerdasan buatan
+seharusnya disamakan dengan manusia dan badan hukum (korporasi) sebagai pengemban
+hak dan kewajiban.
+Penempatan kecerdasan buatan sebagai subjek hukum masih menjadi tantangan bagi
+pemerintah dan pembuat undang-undang. Hal ini menjadi penting ketika kecerdasan buatan
+menjadi elemen dalam kehidupan masyarakat. Kecerdasan buatan yang diciptakan untuk
+5 Eka N. A. M. Sihombing and Muhammad Yusrizal Adi Syahputra, “Implementasi Penggunaan
+Kecerdasan Buatan Dalam Pembentukan Peraturan Daerah,” Jurnal Ilmiah Kebijakan Hukum 14, no. 3
+(2020): 419–434.
+6 Kusumawardani, “HUKUM PROGRESIF DAN PERKEMBANGAN TEKNOLOGI
+KECERDASAN BUATAN.”
+Itok Dwi Kurniawan:
+Analisis terhadap Artificial Intelligence sebagai Subjek Hukum Pidana
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|38
+membantu pekerjaan manusia, dan pada akhirnya dapat menggantikan pekerjaan manusia,
+tentunya harus melayani kepentingan manusia, terutama kesejahteraan manusia. Walaupun
+kecerdasan buatan memiliki keunggulan dibandingkan manusia dalam melakukan
+pekerjaan, bukan berarti kecerdasan buatan tidak memiliki kelemahan dalam
+pengoperasiannya.
+Fakta telah membuktikan bahwa teknologi kecerdasan buatan lebih akurat dan lebih
+cepat daripada profesional hukum manusia dalam menganalisis dan memecahkan masalah
+hukum. Dengan kata lain, kecerdasan buatan tidak dapat mengambil alih semua aktivitas
+secara langsung dalam profesi hukum manusia. Intelijen artifisial tidak hanya
+menyumbangkan kepastian hukum, dan dalam sengketa hukum selalu penuh perdebatan
+antara kepastian, kepentingan dan keadilan. Keadilan tidak ada hubungannya dengan
+algoritme, tetapi dengan simpati, kepedulian terhadap standar manusia, dan pandangan
+serius terhadap fakta. Untuk mendekatkan hukum pada keadilan, harus ada manusia yang
+berprofesi hati nurani, berintegritas, dan bijak hukum.
+7
+Berdasarkan uraian masalah seperti pada bagian pengantar ini yang berisi tentang
+pro dan kontra terkait penempatan kecerdasan buatan sebagai subjek hukum, artikel ini akan
+memfokuskan pada masalah yang berkaitan dengan tanggung jawab kecerdasan buatan
+dalam melakukan perbuatan hukum, terutama ketika melakukan tindakan kriminal.
+Sebagaimana kita ketahui dalam hukum pidana bahwa barang siapa yang melanggar
+ketentuan hukum pidana (melakukan tindak pidana) harus dikenakan sanksi pidana. Lalu
+bagaimana jika kecerdasan buatan melakukan tindakan kriminal?
+METODE
+Artikel ini ditulis dengan menggunakan metode penelitian hukum normatif.
+Penelitian hukum normatif dilakukan untuk memecahkan masalah hukum yang konkrit
+seperti penyelesaian masalah hukum yang dilakukan oleh para praktisi hukum, hal ini
+berkaitan dengan bagaimana dan dimana masalah hukum diatur oleh undang-undang, yang
+dilakukan dengan meneliti fakta-fakta hukum, peraturan-peraturan hukum yang relevan
+dengan masalah, dan bahkan kasus-kasus konkrit yang berkaitan dengan masalah hukum
+yang harus diselesaikan.
+8
+Pendekatan yang digunakan dalam penelitian ini adalah pendekatan konseptual yang
+tertuang dalam normalisasi suatu aturan dalam kaitannya dengan konsep yang digunakan.
+Sebagian besar jenis pendekatan ini digunakan untuk memahami konsep-konsep yang
+berkaitan dengan normalisasi dalam suatu undang-undang, apakah sesuai dengan semangat
+yang terkandung dalam konsep-konsep hukum yang mendasarinya. Pendekatan ini
+berangkat dari pandangan dan doktrin yang berkembang dalam ilmu hukum. Pendekatan ini
+penting karena pemahaman terhadap doktrin-doktrin yang berkembang dalam ilmu hukum
+7 Widodo Dwi Putro, “DISRUPSI DAN MASA DEPAN PROFESI HUKUM,” Mimbar Hukum -
+Fakultas Hukum Universitas Gadjah Mada 32, no. 1 (February 15, 2020): 19–29, accessed August 18, 2023,
+https://jurnal.ugm.ac.id/jmh/article/view/42928.
+8 William H. Putman, Legal Research (Australia: Thomson Delmar Learning, 2004).
+Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, Vol 1, No 1, Juli 2023
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|39
+dapat menjadi landasan untuk membangun argumentasi hukum dalam menyelesaikan
+persoalan hukum yang dihadapi. Doktrin akan memperjelas gagasan dengan memberikan
+pengertian hukum, konsep hukum, dan asas hukum yang relevan dengan permasalahan.
+9
+Teknik analisis yang digunakan dalam penulisan artikel ini menggunakan metode
+deduktif yang didasarkan pada prinsip-prinsip dasar. Melalui konstruksi penalaran ini
+penulis menarik kesimpulan dari hal-hal yang bersifat umum ke hal-hal yang khusus.
+Penggunaan metode deduksi ini dimulai dengan mengajukan premis mayor, kemudian
+mengajukan premis minor. Kemudian dari kedua premis tersebut ditarik kesimpulan atau
+konklusi.10
+HASIL DAN PEMBAHASAN
+Kecerdasan buatan merupakan hasil teknologi yang diciptakan oleh manusia yang
+bertujuan untuk mempermudah pekerjaannya, sehingga pekerjaan dapat dilakukan secara
+efektif dan efisien. Kecerdasan buatan dirancang untuk menjadi cerdas sehingga memiliki
+kemampuan yang persis sama dengan otak manusia, yaitu memiliki kemampuan untuk
+bernalar, berpikir, mengolah pengetahuan, bahkan mengambil keputusan dalam
+memecahkan masalah. Melalui perintah manusia, kecerdasan buatan dapat menerima
+pengetahuan serta dengan mensimulasikan proses penalaran kecerdasan buatan dapat
+menggunakan pengetahuan dan berpikir seperti manusia untuk memecahkan masalah yang
+ada. Walaupun tidak dapat menerima peneliti, pengalaman, dan pengetahuan seperti
+manusia, namun melalui upaya yang diberikan oleh manusia, Artificial Intelligence dapat
+memperoleh pengetahuan yang mereka butuhkan.
+11 Dengan demikian dapat dikatakan
+bahwa kecerdasan buatan diciptakan sedemikian rupa dengan tujuan yang sama dengan
+manusia bahkan dapat melebihi manusia dalam membantu atau sebagai pengganti manusia
+untuk melakukan suatu perbuatan.
+Secara teoritis subjek hukum dapat membuat suatu perbuatan hukum atau perbuatan
+hukum dan subjek hukum yang terdapat dalam hukum positif Indonesia adalah “manusia
+(natuurlijke person)” dan “badan hukum (rechts person)”.
+12 Menurut L.J. van Apeldoorn
+bahwa “ Untuk dapat melakukan perbuatan hukum diperlukan syarat-syarat tertentu, yaitu
+subjek hukum yang mempunyai kemampuan memegang hak”. Menurut L.J. van Apeldoorn
+“Kemampuan memegang hak yang bersangkutan harus dibedakan dengan kesanggupannya
+dalam perbuatan hukum sebagaimana terhadap anak di bawah umur dan orang yang berada
+di bawah perwalian disebut subjek hukum karena orang tersebut mempunyai hak. Namun
+9 Saifu Anam, “PENDEKATAN PERUNDANG-UNDANGAN (STATUTE APPROACH)
+DALAM PENELITIAN HUKUM | Saiful Anam & Partners,” accessed August 18, 2023,
+https://www.saplaw.top/pendekatan-perundang-undangan-statute-approach-dalam-penelitian-hukum/.
+10 Peter Mahmud Marzuki, Penelitian Hukum (Jakarta: Prenada Media Group, 2010).
+11 Ririen Kusumawati, “KECERDASAN BUATAN MANUSIA (ARTIFICIAL INTELLIGENCE);
+TEKNOLOGI IMPIAN MASA DEPAN,” ULUL ALBAB Jurnal Studi Islam 9, no. 2 (December 26, 2008):
+257–274, accessed August 18, 2023, https://ejournal.uin-malang.ac.id/index.php/ululalbab/article/view/6218.
+12 Dudu Duswara Machmudin., Pengantar Ilmu Hukum (Bandung: Refika Aditama, 2003).
+Itok Dwi Kurniawan:
+Analisis terhadap Artificial Intelligence sebagai Subjek Hukum Pidana
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|40
+dari segi hukum, orang-orang tersebut dinyatakan tidak cakap melakukan perbuatan hukum.
+Dalam hal ini yang menentukan layak tidaknya subyek hukum adalah hukum”.
+13
+Berdasarkan penjelasan tersebut dapat dipahami sesuatu yang dapat dinyatakan
+sebagai subjek hukum atau tidak ditentukan oleh undang-undang yang berlaku saat ini.
+Seperti halnya kecerdasan buatan, kecerdasan buatan seperti subjek hukum lainnya, mereka
+memiliki hak dan kewajiban serta kewajiban dan hak tindakannya harus diatur oleh norma
+hukum. Kecerdasan Buatan tidak bisa disamakan dengan manusia secara keseluruhan karena
+kecerdasan buatan tidak memiliki sifat manusia seperti manusia, akan tetapi kecerdasan
+buatan disamakan dengan status hukum yang sama dinyatakan sebagai subjek hukum.
+Badan hukum atau sesuatu selain manusia tidak sama dengan manusia, karena akal
+dan hati nurani hanya dimiliki oleh manusia dan tidak ada pada apapun di luar manusia,
+termasuk bagi badan hukum dan alam. Namun jika perspektif yang digunakan adalah analogi
+bentuk fisik atau penampilan lahiriah, dari sisi manusia yang memiliki jasmani dan rohani,
+maka badan hukum dan alam juga memiliki sisi tersebut. Badan hukum yang merupakan
+kumpulan manusia yang memiliki wujud jasmani (jasmani) dan jiwa (spiritual). alam yang
+merupakan tempat hidup manusia yang memiliki wujud fisik (jasmani) dan jiwa (rohani),
+meskipun hanya masyarakat adat yang percaya bahwa alam memiliki roh. Seperti misalnya
+masyarakat Jawa yang percaya akan kekuatan gaib yang disebut kasekten (magis), dan
+percaya bahwa roh nenek moyang dan roh alam sangat berpengaruh dalam kehidupan
+manusia.
+14
+Badan hukum adalah pendukung hak dan kewajiban berdasarkan hukum yang bukan
+manusia. Sebagai subjek hukum, badan hukum memiliki kemampuan untuk melakukan
+perbuatan hukum atau perbuatan hukum.
+15 Kecerdasan buatan lebih tepat disamakan dengan
+badan hukum sebagai subyek hukum, daripada manusia sebagai subyek hukum alam. Seperti
+yang telah dijelaskan sebelumnya, membawa kemampuan kecerdasan buatan untuk
+melakukan perbuatan hukum menjadikan kecerdasan buatan mampu berperan sebagai
+pembawa hak dan kewajiban. Pertanggungjawaban hukum atas perbuatan kecerdasan
+buatan, memang perlu dikaji secara mendalam. Walaupun kecerdasan buatan memiliki
+kedudukan sebagai subjek hukum yang sama dengan badan hukum, namun tanggapan
+pertanggungjawaban terhadap perbuatan hukum yang dilakukan oleh kecerdasan buatan
+harus jelas dan memiliki kepastian hukum.
+Kita juga dapat menemukan perbedaan pendapat mengenai penempatan kecerdasan
+buatan sebagai subjek hukum yang disamakan dengan badan hukum. Ada pendapat bahwa
+kecerdasan buatan tidak dapat disamakan dengan badan hukum untuk menjadi subjek
+hukum, dimana suatu badan hukum memiliki maksud dan tujuan yang jelas dan tegas dalam
+13 Peter Mahmud Marzuki, Pengantar Ilmu Hukum (Jakarta: Kencana prenada media, 2008),
+accessed August 18, 2023, https://opac.perpusnas.go.id/DetailOpac.aspx?id=527696.
+14 Shely Cathrin, “Teknologi Dan Masa Depan Otonomi Manusia: Sebuah Kajian Filsafat Manusia,”
+FOUNDASIA 10, no. 1 (September 24, 2019): 35–50, accessed August 18, 2023,
+https://journal.uny.ac.id/index.php/foundasia/article/view/27311.
+15 R. Otje Salman, Beberapa Aspek Sosiologi Hukum (Bandung, 2000).
+Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, Vol 1, No 1, Juli 2023
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|41
+pendiriannya serta terdapat ruang lingkup manusia, dan kecerdasan buatan tidak dapat
+berdiri sendiri yang mana, sebagaimana diketahui, Komputer diatur dan diprogram oleh
+manusia dan jika komputer atau kecerdasan buatan membuat keputusan yang dapat
+disamakan dengan manusia, maka kesempurnaan dalam keputusan tidak dapat dipastikan
+jika tidak ada supremasi manusia dalam pengambilan keputusan, karena komputer tidak
+selalu bebas dari kesalahan sistem.
+16
+Sehubungan dengan pertanggungjawaban pidana atas kecerdasan buatan ketika
+melakukan tindak pidana, maka perlu dibicarakan pertanggungjawaban pidana terlebih
+dahulu. Konsep pertanggungjawaban pidana sebenarnya tidak hanya menyangkut masalah
+hukum, tetapi juga menyangkut masalah nilai-nilai moral atau kesusilaan umum yang dianut
+oleh suatu organisasi, komunitas atau kelompok dalam masyarakat, hal ini dilakukan agar
+pertanggungjawaban pidana tercapai. dengan memenuhi keadilan.
+17 Pertanggungjawaban
+pidana merupakan suatu bentuk penentuan apakah tersangka atau terdakwa dimintai
+pertanggungjawaban atas suatu tindak pidana yang terjadi. Dengan kata lain,
+pertanggungjawaban pidana merupakan bentuk yang menentukan apakah seseorang
+dipidana atau tidak.
+Menurut Chairul Huda bahwa dasar suatu perbuatan pidana adalah asas legalitas,
+sedangkan pidana dapat dipidana atas dasar kesalahan, hal ini berarti seseorang akan
+mempunyai tanggung jawab pidana apabila ia telah melakukan perbuatan yang salah dan
+bertentangan dengan hukum. hukum. Pada hakekatnya pertanggungjawaban pidana adalah
+suatu bentuk mekanisme yang diciptakan untuk bereaksi terhadap pelanggaran suatu
+perbuatan tertentu yang telah dilakukan yang disepakati.
+18 Kesalahan merupakan unsur
+utama dalam pertanggungjawaban pidana. Dalam pengertian tindak pidana tidak termasuk
+masalah pertanggungjawaban pidana, maka tindak pidana hanya menunjuk pada apa
+perbuatan itu melawan hukum atau dilarang oleh undang-undang, mengenai apakah
+seseorang yang melakukan kejahatan itu kemudian dipidana tergantung pada apakah orang
+yang melakukan tindak pidana tersebut. memiliki kesalahan atau tidak.
+Pertanggungjawaban pidana dalam sistem hukum komando selalu dikaitkan dengan
+pemidanaan mens rea dam. Pertanggungjawaban pidana memiliki hubungan dengan
+masyarakat yaitu hubungan pertanggungjawaban dengan masyarakat sebagai fungsi,
+pertanggungjawaban disini memiliki fungsi kekuatan penjatuhan pidana sehingga
+pertanggungjawaban disini memiliki fungsi kontrol sosial agar dalam masyarakat tidak
+terjadi kejahatan. Selain itu, pertanggungjawaban pidana dalam sistem common law
+berkaitan dengan mens rea, bahwa pertanggungjawaban pidana didasarkan pada keadaan
+16 Muhammad Tan Abdul Rahman Haris and Tantimin Tantimin, “ANALISIS
+PERTANGGUNGJAWABAN HUKUM PIDANA TERHADAP PEMANFAATAN ARTIFICIAL
+INTELLIGENCE DI INDONESIA,” Jurnal Komunikasi Hukum (JKH) 8, no. 1 (February 1, 2022): 307–
+316, accessed August 18, 2023, https://ejournal.undiksha.ac.id/index.php/jkh/article/view/44408.
+17 Hanafi Amrani and Mahrus Ali, Sistem Pertanggungjawaban Pidana (Surabaya: Rajawali Pers,
+2015).
+18 Chairul Huda, Dari Tiada Pidana Tanpa Kesalahan Menuju Kepada Tiada Pertanggungjawaban
+Pidana Tanpa Kesalahan (Jakarta: Kencana Prenada Media Group, 2013).
+Itok Dwi Kurniawan:
+Analisis terhadap Artificial Intelligence sebagai Subjek Hukum Pidana
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|42
+jiwa sebagai salah pikir. Guilty mind mengandung pengertian sebagai kesalahan subjektif,
+yaitu seseorang dinyatakan bersalah karena pembuatnya sendiri dinilai memiliki pemikiran
+yang salah, sehingga orang tersebut harus bertanggung jawab. Ada pertanggungjawaban
+pidana yang dibebankan kepada pembuatnya, maka pembuat pidana itu harus dihukum.
+Tidak ada pemikiran yang salah berarti tidak ada pertanggungjawaban pidana dan
+mengakibatkan pelakunya tidak dipidana.
+Mengingat asas pertanggungjawaban dalam hukum pidana yaitu (geen straf zonder
+schuld; actus non facit reum nisi mens sir rea) suatu tindak pidana tidak berlaku jika tidak
+ada kesalahan. Perlu diketahui bahwa subjek hukum pidana yang berlaku di Indonesia adalah
+orang dan sesuai dengan perluasan subjek hukum pidana, maka badan hukum (korporasi)
+dapat menjadi subjek hukum pidana di Indonesia. Peraturan mengenai kecerdasan buatan di
+Indonesia belum diatur dan dibentuk secara khusus, oleh karena itu diperlukan interpretasi
+untuk menentukan apakah kecerdasan buatan merupakan subjek hukum atau tidak di
+Indonesia.
+Berdasarkan teori pertanggungjawaban pidana, jelas bahwa pertanggungjawaban
+pidana selalu dikaitkan dengan unsur mens rea seseorang. Seperti yang telah disebutkan
+sebelumnya, mens rea hanya dimiliki oleh manusia. Seseorang dapat dihukum jika ia
+memiliki pikiran yang bersalah dan sebaliknya seseorang tidak dihukum jika ia tidak
+memiliki pikiran yang bersalah. Jika dikaitkan dengan pertanggungjawaban pidana atas
+tindak pidana yang dilakukan oleh kecerdasan buatan, maka dapat disimpulkan bahwa
+kecerdasan buatan tidak memiliki mens rea seperti manusia. Kemampuan berpikir yang
+dimiliki kecerdasan buatan sebenarnya merupakan hasil pemikiran manusia yang dikemas
+dalam sistem komputer yang dijalankan oleh sebuah algoritma.
+Ketika kecerdasan buatan melakukan suatu tindak pidana, maka dalam hal ini
+kecerdasan buatan tidak memahami arti dari akibat perbuatan yang dilakukannya dan
+kecerdasan buatan tidak dapat menentukan kehendaknya sendiri untuk melakukan suatu
+perbuatan, dan kecerdasan buatan tidak memiliki kesadaran dalam melakukan keluar
+tindakan hukum. Berkaitan dengan kesadaran, manusia sebagai subjek hukum mutlak dalam
+hukum pidana tidak selalu lepas dari kelalaian terhadap perbuatan yang dilakukannya,
+sedangkan kecerdasan buatan adalah seperangkat alat yang diciptakan oleh manusia dengan
+bantuan teknologi, sehingga kesadaran tidak terdapat pada kecerdasan buatan. Maka dari
+beberapa kerangka konseptual pertanggungjawaban, kecerdasan buatan tidak memiliki
+kemampuan untuk menjadi subjek hukum yang dapat diberikan tanggung jawab dalam
+hukum pidana.
+Berkenaan dengan pertanggungjawaban pidana bagi kecerdasan buatan yang
+melakukan tindak pidana, jika kecerdasan buatan melakukan tindak pidana maka tanggung
+jawab dapat dikembalikan kepada pencipta kecerdasan buatan tersebut atau kepada
+pengguna kecerdasan buatan tersebut. Hal ini karena untuk dapat dipertanggungjawabkan
+secara pidana, pelaku tindak pidana harus mengetahui dan menginginkan perbuatan yang
+dilakukannya beserta akibat yang ditimbulkannya. Sedangkan kecerdasan buatan tidak
+Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, Vol 1, No 1, Juli 2023
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|43
+memiliki kemauan atau kesadaran dalam melakukan tindakannya. Tindakan yang dilakukan
+oleh kecerdasan buatan hanya sebatas menjalankan perintah dari pengguna yang memiliki
+kesadaran dan kemauan untuk mencapai tujuan penggunaan kecerdasan buatan. Dengan
+demikian, jika kecerdasan buatan melakukan tindak pidana, maka yang dapat dibebani
+pertanggungjawaban pidana adalah pencipta atau penggunanya.
+KESIMPULAN
+Berkaitan dengan kedudukan kecerdasan buatan di Indonesia, belum ada pengaturan
+yang jelas sebagai subjek hukum atau bukan subjek hukum. Jika kecerdasan buatan
+digunakan sebagai subjek hukum, tidak dapat disamakan dengan badan hukum karena badan
+hukum adalah sekelompok orang yang secara bersama-sama menentukan kehendaknya
+untuk mencapai tujuan mereka, sedangkan kecerdasan buatan tidak terdiri dari sekelompok
+orang tetapi sekelompok orang. sistem komputer yang bekerja atas perintah dari orang yang
+mengoperasikannya. Tanggung jawab kecerdasan buatan ketika melakukan tindak pidana
+tidak dapat disamakan dengan orang atau badan hukum, hal ini terlihat dari cara kerja
+tindakan yang dilakukan oleh kecerdasan buatan. Tanggung jawab pidana untuk kecerdasan
+buatan dapat dikenakan pada pembuat kecerdasan buatan dan operator kecerdasan buatan.
+REFERENSI
+Amboro, FL. Yudhi Priyo, and Khusuf Komarhana. “PROSPEK KECERDASAN
+BUATAN SEBAGAI SUBJEK HUKUM PERDATA DI INDONESIA [PROSPECTS
+OF ARTIFICIAL INTELLIGENCE AS A SUBJECT OF CIVIL LAW IN
+INDONESIA].” Law Review 21, no. 2 (2021): 145–172.
+https://ojs.uph.edu/index.php/LR/article/view/3513.
+Amrani, Hanafi, and Mahrus Ali. Sistem Pertanggungjawaban Pidana. Surabaya: Rajawali
+Pers, 2015.
+Anam, Saifu. “PENDEKATAN PERUNDANG-UNDANGAN (STATUTE APPROACH)
+DALAM PENELITIAN HUKUM | Saiful Anam & Partners.” Accessed August 18,
+2023. https://www.saplaw.top/pendekatan-perundang-undangan-statute-approachdalam-penelitian-hukum/.
+Burns, Ed. “What Is Artificial Intelligence and How Does AI Work?” TechTarget. Accessed
+August 18, 2023. https://www.techtarget.com/searchenterpriseai/definition/AIArtificial-Intelligence.
+Cathrin, Shely. “Teknologi Dan Masa Depan Otonomi Manusia: Sebuah Kajian Filsafat
+Manusia.” FOUNDASIA 10, no. 1 (September 24, 2019): 35–50. Accessed August 18,
+2023. https://journal.uny.ac.id/index.php/foundasia/article/view/27311.
+Fahrudin, Naiman. “PENERAPAN METODE FINITE STATE MACHINE PADA GAME
+ADVENTURE ‘FRANCO.’” JATI (Jurnal Mahasiswa Teknik Informatika) 2, no. 1
+(March 2, 2018): 446–453. Accessed August 18, 2023.
+https://ejournal.itn.ac.id/index.php/jati/article/view/1703.
+Itok Dwi Kurniawan:
+Analisis terhadap Artificial Intelligence sebagai Subjek Hukum Pidana
+Copyright© 2023; Mutiara: Jurnal Ilmiah Multidisiplin Indonesia, e-ISSN 3025-1028|44
+Haris, Muhammad Tan Abdul Rahman, and Tantimin Tantimin. “ANALISIS
+PERTANGGUNGJAWABAN HUKUM PIDANA TERHADAP PEMANFAATAN
+ARTIFICIAL INTELLIGENCE DI INDONESIA.” Jurnal Komunikasi Hukum (JKH)
+8, no. 1 (February 1, 2022): 307–316. Accessed August 18, 2023.
+https://ejournal.undiksha.ac.id/index.php/jkh/article/view/44408.
+Huda, Chairul. Dari Tiada Pidana Tanpa Kesalahan Menuju Kepada Tiada
+Pertanggungjawaban Pidana Tanpa Kesalahan. Jakarta: Kencana Prenada Media
+Group, 2013.
+Kusumawardani, Qur’ani Dewi. “HUKUM PROGRESIF DAN PERKEMBANGAN
+TEKNOLOGI KECERDASAN BUATAN.” Veritas et Justitia 5, no. 1 (June 26, 2019):
+166–190. Accessed August 18, 2023.
+https://journal.unpar.ac.id/index.php/veritas/article/view/3270.
+Kusumawati, Ririen. “KECERDASAN BUATAN MANUSIA (ARTIFICIAL
+INTELLIGENCE); TEKNOLOGI IMPIAN MASA DEPAN.” ULUL ALBAB Jurnal
+Studi Islam 9, no. 2 (December 26, 2008): 257–274. Accessed August 18, 2023.
+https://ejournal.uin-malang.ac.id/index.php/ululalbab/article/view/6218.
+Machmudin., Dudu Duswara. Pengantar Ilmu Hukum. Bandung: Refika Aditama, 2003.
+Marzuki, Peter Mahmud. Penelitian Hukum. Jakarta: Prenada Media Group, 2010.
+Peter Mahmud Marzuki. Pengantar Ilmu Hukum. Jakarta: Kencana prenada media, 2008.
+Accessed August 18, 2023. https://opac.perpusnas.go.id/DetailOpac.aspx?id=527696.
+Putman, William H. Legal Research. Australia: Thomson Delmar Learning, 2004.
+Putro, Widodo Dwi. “DISRUPSI DAN MASA DEPAN PROFESI HUKUM.” Mimbar
+Hukum - Fakultas Hukum Universitas Gadjah Mada 32, no. 1 (February 15, 2020): 19–
+29. Accessed August 18, 2023. https://jurnal.ugm.ac.id/jmh/article/view/42928.
+Salman, R. Otje. Beberapa Aspek Sosiologi Hukum. Bandung, 2000.
+Sihombing, Eka N. A. M., and Muhammad Yusrizal Adi Syahputra. “Implementasi
+Penggunaan Kecerdasan Buatan Dalam Pembentukan Peraturan Daerah.” Jurnal
+Ilmiah Kebijakan Hukum 14, no. 3 (2020): 419–434.

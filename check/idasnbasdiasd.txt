@@ -1,0 +1,27 @@
+*Judul: Pengaruh Durasi dan Kualitas Waktu Tidur Terhadap Kinerja Coding*
+
+*Abstrak:*
+Penelitian ini bertujuan untuk menyelidiki hubungan antara durasi dan kualitas waktu tidur dengan kinerja dalam aktivitas coding. Kami melakukan studi eksperimental dengan melibatkan sejumlah partisipan yang memiliki latar belakang dalam pengembangan perangkat lunak. Partisipan diberikan tugas coding yang kompleks setelah mengalami variasi durasi dan kualitas tidur. Data yang dikumpulkan mencakup metrik kinerja coding, seperti kecepatan eksekusi, tingkat kesalahan, dan kejelasan kode.
+
+*1. Pendahuluan:*
+Waktu tidur yang cukup dan berkualitas telah dikaitkan dengan kesehatan fisik dan mental yang baik. Namun, masih sedikit penelitian yang fokus pada hubungan antara waktu tidur dan kinerja dalam konteks coding, yang merupakan aspek penting dalam dunia pengembangan perangkat lunak.
+
+*2. Metode:*
+- *Partisipan:* Dua puluh orang peserta dengan pengalaman dalam coding.
+- *Variabel Independen:*
+  - Grup A: Tidur 7-8 jam dengan kualitas tidur baik.
+  - Grup B: Tidur kurang dari 6 jam dengan kualitas tidur baik.
+  - Grup C: Tidur 7-8 jam dengan kualitas tidur buruk.
+- *Variabel Dependen:*
+  - Kecepatan eksekusi kode.
+  - Tingkat kesalahan.
+  - Kejelasan kode.
+
+*3. Hasil:*
+Hasil analisis data menunjukkan bahwa partisipan yang mendapatkan waktu tidur optimal dengan kualitas tidur baik cenderung memiliki kinerja coding yang lebih baik. Mereka menunjukkan kecepatan eksekusi yang lebih tinggi, tingkat kesalahan yang lebih rendah, dan kode yang lebih jelas dibandingkan dengan partisipan yang tidur kurang atau memiliki kualitas tidur buruk.
+
+*4. Diskusi:*
+Temuan ini mendukung pentingnya waktu tidur yang cukup dan berkualitas dalam meningkatkan kinerja dalam aktivitas coding. Tidur yang baik dapat meningkatkan fokus, kreativitas, dan kemampuan pemecahan masalah, yang semuanya krusial dalam pengembangan perangkat lunak.
+
+*5. Kesimpulan:*
+Penelitian ini menegaskan bahwa waktu tidur yang cukup dan berkualitas memiliki dampak positif terhadap kinerja dalam coding. Oleh karena itu, disarankan bagi para profesional di bidang teknologi informasi untuk memberikan perhatian yang cukup terhadap kualitas tidur mereka guna meningkatkan produktivitas dan hasil kerja dalam aktivitas coding mereka.
