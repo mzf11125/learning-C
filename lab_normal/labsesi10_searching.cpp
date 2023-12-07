@@ -103,7 +103,6 @@ int iterativeInterpolationSearch(int arr[], int left, int right, int find){
 	return -1;
 }
 
-
 //recursiveinterpolationsearch
 int recursiveInterpolationSearch(int arr[], int left, int right, int find){
 	while (left <= right && find >= arr[left] && find <= arr[right]){
@@ -120,7 +119,6 @@ int recursiveInterpolationSearch(int arr[], int left, int right, int find){
 			//Kiri/arah value yang lebih kecil
 			return recursiveInterpolationSearch(arr, left, mid - 1, find);
 		}
-		
 	}
 	return -1;
 }
