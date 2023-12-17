@@ -1,0 +1,58 @@
+Planting Tree
+Yuri and her friends will plant trees in the forest near their university. They do this in
+the hope that forests will remain sustainable and can reduce air pollution. Yuri has made
+a list of names of friends and trees to be planted. The name of the tree written by Yuri
+is its Latin name. The list is saved in a document. However, due to the large number
+of Yuri’s friends participating in this greening activity, Yuri had difficulty finding what
+trees each friend would plant. Yuri asks for your help to make a program that can help
+speed up the search.
+Format Input
+Read from file “testdata.in”. The first line, consisting of one integer
+N, is the number of
+records. The next
+N lines consist of the name of friend
+M and the name of the tree
+P
+separated by ‘#’.
+Next line consists of one integer
+T, the number of test cases given. For each test case
+there is
+S, which is the name of a friend.
+Format Output
+The output must be stated in the format “Case #
+X: M” where
+M is the name of the
+plant. If the friend doesn’t exist on the list, then print “Case #
+X: N/A” where N/A
+means that it is not found.
+Constraints • 1 ≤ N ≤ 100 • 1 ≤ |M|, |P|, |S| ≤ 40 (|X| means length of string
+X
+)
+•
+1
+≤
+T
+≤ 100
+• The list is already sorted based on the friend’s name in ascending order. • M and S only consists of letters a-z and A-Z. • P only consists of letters a-z and A-Z and spaces
+10
+Aaliyah#Fragaria
+Briana#Quisqualis indica
+Cameron#Bomabaceae
+Daphne#Calodendrum capanse
+Davina#Anthemis nobilis
+Elsa#Cola acuminata
+Fiona#Dracaena fragrans
+Gwen#Fraxinus americana
+Helen#Gazania
+Irene#Gerbera jamesonii 5
+Aaliyah
+Irene
+Davina
+Elsa
+Zacky
+Sample Output (standard output)
+Case #1: Fragaria
+Case #2: Gerbera jamesonii
+Case #3: Anthemis nobilis
+Case #4: Cola acuminata
+Case #5: N/A 

@@ -1,0 +1,150 @@
+// ... (previous imports)
+
+export default function AdminContainer() {
+  // ... (previous code)
+
+  return (
+    <>
+      <div className={`${styles._wrapper} w-[70vw]`}>
+        <Sidebar />
+
+        <div id={`${styles.content} w-[70vw]`}>
+          <TopBar />
+
+          {/* Monthly Visitors Chart */}
+          <div className={`container ${styles.content_wrapper}`}>
+            <div className="flex flex-col">
+              <h2 className={`${styles.content_h} mb-4 text-2xl font-bold`}>
+                Monthly Visitors
+              </h2>
+              <div className={styles.graph_background}>
+                <Bar
+                  options={options}
+                  data={{
+                    labels: monthNames,
+                    datasets: [
+                      {
+                        label: "Monthly Visitors",
+                        data: monthlyVisitors,
+                        backgroundColor: [
+                          "rgba(255, 99, 132, 1)",
+                          "rgba(54, 162, 235, 1)",
+                          "rgba(255, 206, 86, 1)",
+                        ],
+                      },
+                    ],
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* User Statistics */}
+            <div className="flex flex-col mt-6">
+              <div className="col">
+                <h2 className={`${styles.content_h2} text-2xl mb-4 font-bold`}>
+                  User Statistics
+                </h2>
+                <div
+                  className={`${styles.statistics_bg} p-4 rounded-lg shadow-md bg-gray-800 text-white`}
+                  id={styles.vendor_statistics}
+                >
+                  <InformationRow name="Male users" value={maleVisitors} />
+                  <InformationRow name="Female users" value={femaleVisitors} />
+                  <AgeStatistics data={ageCategorialVisitors} />
+                  <TotalInformation
+                    name="Total Users"
+                    value={maleVisitors + femaleVisitors}
+                  />
+                </div>
+              </div>
+
+              {/* Vendor Statistics */}
+              <div className="col mt-6">
+                <h2 className={`${styles.content_h2} text-2xl mb-4 font-bold`}>
+                  Vendor Statistics
+                </h2>
+                <div
+                  className={`${styles.statistics_bg} p-4 rounded-lg shadow-md bg-gray-800 text-white`}
+                  id={styles.vendor_statistics}
+                >
+                  <InformationRow
+                    name="Published Vendors"
+                    value={vendorDetails.published}
+                  />
+                  <InformationRow
+                    name="Need Approval"
+                    value={vendorDetails.need_approval}
+                  />
+                  <InformationRow name="Hidden" value={vendorDetails.hidden} />
+                  <TotalInformation
+                    name="Total Vendors"
+                    value={
+                      vendorDetails.published +
+                      vendorDetails.need_approval +
+                      vendorDetails.hidden
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Page Statistics */}
+            <div className="flex flex-col mt-6">
+              <div className="flex flex-row justify-between">
+                <div className="flex flex-col">
+                  <h2 className={`${styles.content_h2} text-2xl mb-4 font-bold`}>
+                    Page Statistics
+                  </h2>
+                  <div
+                    className={`${styles.statistics_bg} p-4 rounded-lg shadow-md bg-gray-800 text-white`}
+                  >
+                    <InformationRow name="Homepage" value="40" />
+                    <InformationRow name="Blog" value="30" />
+                    <InformationRow name="Vendor's Profile" value="30" />
+                  </div>
+                </div>
+
+                {/* Service Area */}
+                <div className="flex-col mt-6">
+                  <h2 className={`${styles.content_h2} text-2xl mb-4 font-bold`}>
+                    Service Area
+                  </h2>
+                  <div
+                    className={`${styles.statistics_bg} p-4 rounded-lg shadow-md bg-gray-800 text-white`}
+                    id={styles.service_area}
+                  >
+                    {areas.map((area, idx) => (
+                      <InformationRow
+                        key={idx}
+                        name={area.location}
+                        value={area.count}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Vendor Categories */}
+              <div className="flex-row mt-6">
+                <h2 className={`${styles.content_h2} text-2xl mb-4 font-bold`}>
+                  Vendor Categories
+                </h2>
+                <div
+                  className={`${styles.statistics_bg} p-4 rounded-lg shadow-md bg-gray-800 text-white`}
+                >
+                  {categorizedVendors.map((vendor, idx) => (
+                    <InformationRow
+                      key={idx}
+                      name={vendor.category_name}
+                      value={vendor.vendor_count}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

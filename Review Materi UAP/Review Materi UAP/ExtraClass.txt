@@ -1,0 +1,55 @@
+SOAL 1 : Sorting Nilai
+======================
+INPUT:
+5
+jason 65
+adrian 87
+cristoper 95
+daniel 91
+vincent 95
+
+OUTPUT:
+cristoper 95
+vincent 95
+daniel 91
+adrian 87
+jason 65
+
+Sort berdasarkan nilai dari besar ke kecil
+
+Jika terdapat nilai yang sama
+sort berdasarkan nama sesuai urutan alphabet
+
+SOAL 2 : Sorting Judul Buku dari file
+=====================================
+INPUT: 
+To Kill a Mockingbird#Harper Lee
+Harry Potter and the Sorcerer Stone#JK Rowling
+Hunger Games#Suzanne Collins
+Lord of The Rings#Tolkien
+Alchemist#Paulo Coelho
+
+OUTPUT:
+Alchemist - Paulo Coelho
+Harry Potter and the Sorcerer Stone - JK Rowling
+Hunger Games - Suzanne Collins
+Lord of The Rings - Tolkien
+To Kill a Mockingbird - Harper Lee
+
+SOAL 3 : Searching index paling kiri dari suatu angka
+=====================================================
+INPUT :
+6 1
+1, 1, 2, 2, 3, 3
+3
+
+OUTPUT : 
+4
+
+
+
+
+
+
+
+
