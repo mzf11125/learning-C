@@ -1,36 +1,37 @@
 #include <stdio.h>
-#include <math.h>
 
-long long find_smallest_N(long long M) {
-    long long low = 0;
-    long long high = M;
+long long sqrt_custom(long long x) {
+    long long guess = x / 2;
+    long long last_guess = 0;
+    while (guess * guess != x && guess != last_guess) {
+        last_guess = guess;
+        guess = (guess + x / guess) / 2;
+    }
+    return guess;
+}
 
-    while (low < high) {
-        long long mid = low + (high - low) / 2;
-        long long sum = mid * (mid + 1) * (2 * mid + 1) / 6;
-
-        if (sum <= M) {
-            low = mid + 1;
+int minN(long long M) {
+    long long lower = 1, upper = sqrt_custom(M);
+    while (lower <= upper) {
+        long long middle = (lower + upper) / 2;
+        long long sum = middle * (middle + 1) * (2 * middle + 1) / 6;
+        if (sum >= M) {
+            upper = middle - 1;
         } else {
-            high = mid;
+            lower = middle + 1;
         }
     }
-
-    return low;
+    return lower;
 }
 
 int main() {
     int T;
     scanf("%d", &T);
-
-    for (int i = 1; i <= T; ++i) {
+    for (int i = 1; i <= T; i++) {
         long long M;
         scanf("%lld", &M);
-
-        long long N = find_smallest_N(M);
-
-        printf("Case #%d: %lld\n", i, N);
+        long long answer = minN(M);
+        printf("Case #%d: %lld\n", i, answer);
     }
-
     return 0;
 }

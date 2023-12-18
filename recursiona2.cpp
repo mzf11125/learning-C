@@ -18,7 +18,7 @@ int f(int n, int *count) {
 }
 
 int main() {
-    int T;
+    int T; 
     scanf("%d", &T);
 
     for (int i = 1; i <= T; i++) {
