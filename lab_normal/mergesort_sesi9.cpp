@@ -93,12 +93,12 @@ void merge(int arr[], int low, int mid, int high) {
 //merge sort
 
 void mergeSort(int arr[], int low, int high) {
-	if(low>=high)return;
-	int mid = (high + low) / 2; //Divide process
+	if(low>=high)return; //Parameter
+	int mid = low + (high - low) / 2; //Divide process
 	mergeSort(arr, low, mid); //Left recursion(array, the first array, and the array next to it)
 	mergeSort(arr, mid + 1, high);//Right recursion(array, the array next to mid, and the highest array)
 //	conquer(combine array)
-	merge(arr, low, mid, high);
+	merge(arr, low, mid, high);//Combine
 }
 
 

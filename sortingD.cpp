@@ -19,16 +19,30 @@ void merge(struct video arr[], int left, int right) {
     int leftindex = left;
     int rightindex = mid + 1;
 
-    // Merge and sort the data based on the number of views
+    // Merge and sort the data
     while (leftindex <= mid && rightindex <= right) {
-        if (arr[leftindex].view > arr[rightindex].view) {
-            // If the element in the right array has more views, add it to the sorted array
+        if (arr[leftindex].view == arr[rightindex].view) {
+
+            if (strcmp(arr[leftindex].video_title, arr[rightindex].video_title) < 0) {
+                sortedlist[curr] = arr[leftindex];
+                curr++;
+                leftindex++;
+            } else {
+                sortedlist[curr] = arr[rightindex];
+                curr++;
+                rightindex++;
+            }
+
+        } else if (arr[leftindex].view < arr[rightindex].view) {
+            // If the element in the right array is greater, add it to the sorted array
             sortedlist[curr] = arr[rightindex];
-            curr++, rightindex++;
+            curr++;
+            rightindex++;
         } else {
-            // If the element in the left array has more views or equal, add it to the sorted array
+            // If the element in the left array is greater or equal, add it to the sorted array
             sortedlist[curr] = arr[leftindex];
-            curr++, leftindex++;
+            curr++;
+            leftindex++;
         }
     }
 
@@ -68,20 +82,19 @@ void mergeSort(struct video arr[], int left, int right) {
 
 int main() {
     int size = 0;
-    struct video listvideo[10005];
+    struct video listvideo[1001];
     FILE *file = fopen("testdata.in", "r");
     int i = 0;
-    while (!feof(file)) {
-        fscanf(file, "%[^#]#%[^#]#%d\n", listvideo[i].video_title, listvideo[i].artist_name, &listvideo[i].view);
+    while (fscanf(file, "%[^#]#%[^#]#%d\n", listvideo[i].video_title, listvideo[i].artist_name, &listvideo[i].view) != EOF) {
         i++;
     }
     size = i;
+    fclose(file); 
     mergeSort(listvideo, 0, size - 1);
 
     for (int i = 0; i < size; i++) {
         printf("%s by %s - %d\n", listvideo[i].video_title, listvideo[i].artist_name, listvideo[i].view);
     }
 
-    fclose(file);
     return 0;
 }
