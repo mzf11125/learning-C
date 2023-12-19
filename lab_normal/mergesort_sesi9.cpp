@@ -2,29 +2,29 @@
 //Merge sort
 #include <stdio.h>
 
-//Swap
-void swap(int arr[], int idx1, int idx2) {
-	int temp = arr[idx1];
-	arr[idx1] = arr[idx2];
-	arr[idx2] = temp;
-}
-
-//partition
-int partition(int arr[], int low, int high) {
-	int pivot = arr[high];//Take pivot from the highest index
-
-	int i = low - 1;
-
-	for(int j = low; j < high; j++) {
-		if(arr[j] < pivot) {
-			i++; //i = i + 1
-			swap(arr, i, j);//swap the array
-		}
-	}
-	i++;
-	swap(arr, i, high);
-	return i;
-}
+////Swap
+//void swap(int arr[], int idx1, int idx2) {
+//	int temp = arr[idx1];
+//	arr[idx1] = arr[idx2];
+//	arr[idx2] = temp;
+//}
+//
+////partition
+//int partition(int arr[], int low, int high) {
+//	int pivot = arr[high];//Take pivot from the highest index
+//
+//	int i = low - 1;
+//
+//	for(int j = low; j < high; j++) {
+//		if(arr[j] < pivot) {
+//			i++; //i = i + 1
+//			swap(arr, i, j);//swap the array
+//		}
+//	}
+//	i++;
+//	swap(arr, i, high);
+//	return i;
+//}
 
 ////Quick sort
 ////Time complexity O(n*log(n))
