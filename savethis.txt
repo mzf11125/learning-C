@@ -1,0 +1,11 @@
+/*contract variable_name{
+	function {
+
+
+	}
+	function{
+	}
+
+}*/
+
+Smart contract template 
