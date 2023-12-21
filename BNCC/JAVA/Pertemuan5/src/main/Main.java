@@ -17,7 +17,7 @@ public class Main {
 		orang1.setNama("Rainer");
 		System.out.println(orang1.getNama());
 		
-		Mahasiswa mahasiswa1 = new Mahasiswa("Rainer", 19, "23182","Laki-laki");
+		Mahasiswa mahasiswa1 = new Mahasiswa("Rainer", 19, 21323182,"Laki-laki");
 		mahasiswa1.perkenalanDiri();
 		
 		//Final variable
