@@ -275,13 +275,13 @@ int main()
             }
             break;
         case 3:
-            //Sort function
+            // Sort function
             char columnName[5005];
             char ascordesc[5005];
             printf("Choose column: ");
             scanf("%[^\n]", columnName);
             getchar(); // Consume the newline character
-            printf("Sort ascending or descending: ");
+            printf("Sort ascending or descending (asc/desc): ");
             scanf("%[^\n]", ascordesc);
             getchar(); // Consume the newline character
 
@@ -291,7 +291,6 @@ int main()
             // Display sorted data
             printf("Sorted data:\n");
             displayData(listData, size);
-            break;
 
             break;
         case 4:
