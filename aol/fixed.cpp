@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-struct Data {
+struct Data
+{
     char location[5005];
     char city[5005];
     int price;
@@ -14,21 +15,20 @@ struct Data {
     char furnish[5005];
 } listData[10005];
 
-//Function to display data
+// Function to display data
 void displayData(struct Data *dataArr, int rows)
 {
     printf("%-20s\t%-20s\t%-10s\t%-10s\t%-10s\t%-10s\t%-10s\t%-10s\n",
-           "Location", "City", "Price", "Rooms", "Bathrooms", "Carpark", "Type", "Furnish"); //Print the header of the filename
-    for (int i = 0; i < rows; i++) //Print the data from the file as much as the number of rows that the user inputted
+           "Location", "City", "Price", "Rooms", "Bathrooms", "Carpark", "Type", "Furnish"); // Print the header of the filename
+    for (int i = 0; i < rows; i++)                                                           // Print the data from the file as much as the number of rows that the user inputted
     {
         printf("%-20s\t%-20s\t%-10d\t%-10d\t%-10d\t%-10d\t%-10s\t%-10s\n",
                dataArr[i].location, dataArr[i].city, dataArr[i].price, dataArr[i].room, dataArr[i].bathroom,
-               dataArr[i].carpark, dataArr[i].type, dataArr[i].furnish);
+               dataArr[i].carpark, dataArr[i].type, dataArr[i].furnish); // Print
     }
 }
 
-
-// Function to search data by column
+// Function to search data by column using the struct
 void searchByColumn(struct Data *dataArr, int size, char *columnName, char *searchValue)
 {
     printf("Data found. Detail of data:\n");
@@ -97,9 +97,9 @@ void searchByColumn(struct Data *dataArr, int size, char *columnName, char *sear
         }
     }
 
-    if (foundCount == 0) //If data is not found
+    if (foundCount == 0) // If data is not found
     {
-        printf("Data not found!\n");//Print data not found
+        printf("Data not found!\n"); // Print data not found
     }
 }
 
@@ -128,9 +128,11 @@ void merge(struct Data *arr, int l, int m, int r, char *columnName, char *ascOrD
     {
         int compareResult;
         if (strcmp(columnName, "Location") == 0)
-            compareResult = strcmp(L[i].location, R[j].location);
+            // compareResult = strcmp(L[i].location, R[j].location);
+            compareResult = ascOrDesc[0] == 'a' ? strcmp(L[i].location, R[j].location) : strcmp(R[j].location, L[i].location);
         else if (strcmp(columnName, "City") == 0)
-            compareResult = strcmp(L[i].city, R[j].city);
+            // compareResult = strcmp(L[i].city, R[j].city);
+            compareResult = ascOrDesc[0] == 'a' ? strcmp(L[i].city, R[j].city) : strcmp(R[j].city, L[i].city);
         else if (strcmp(columnName, "Price") == 0)
             compareResult = ascOrDesc[0] == 'a' ? L[i].price - R[j].price : R[j].price - L[i].price;
         else if (strcmp(columnName, "Rooms") == 0)
@@ -140,9 +142,11 @@ void merge(struct Data *arr, int l, int m, int r, char *columnName, char *ascOrD
         else if (strcmp(columnName, "Carpark") == 0)
             compareResult = ascOrDesc[0] == 'a' ? L[i].carpark - R[j].carpark : R[j].carpark - L[i].carpark;
         else if (strcmp(columnName, "Type") == 0)
-            compareResult = strcmp(L[i].type, R[j].type);
+            // compareResult = strcmp(L[i].type, R[j].type);
+            compareResult = ascOrDesc[0] == 'a' ? strcmp(L[i].type, R[j].type) : strcmp(R[j].type, L[i].type);
         else if (strcmp(columnName, "Furnish") == 0)
-            compareResult = strcmp(L[i].furnish, R[j].furnish);
+            // compareResult = strcmp(L[i].furnish, R[j].furnish);
+            compareResult = ascOrDesc[0] == 'a' ? strcmp(L[i].furnish, R[j].furnish) : strcmp(R[j].furnish, L[i].furnish);
         else
             compareResult = 0; // Default case
 
@@ -200,9 +204,9 @@ void mergeSort(struct Data *arr, int l, int r, char *columnName, char *ascordesc
 // Function to export sorted data to a file
 void exportToFile(struct Data *sortedData, int size, const char *filename)
 {
-    FILE *newfile = fopen(filename, "w");
+    FILE *newfile = fopen(filename, "w"); //Write a new file
 
-    if (newfile == NULL)
+    if (newfile == NULL)//IF there is no newfile, 
     {
         printf("Error opening file for writing.\n");
         return;
@@ -221,7 +225,7 @@ void exportToFile(struct Data *sortedData, int size, const char *filename)
     }
 
     fclose(newfile);
-    printf("Data exported to %s successfully.\n", filename);
+    printf("Data exported to %s successfully.\n", filename); //Data is written sucessfully
 }
 
 int main()
@@ -237,7 +241,6 @@ int main()
         size++;
     }
 
-
     int choice = 0;
     char exportFilename[5005];
     do
@@ -249,19 +252,20 @@ int main()
         printf("4. Export Data\n");
         printf("5. Exit\n");
         printf("Your choice: ");
-        scanf("%d", &choice);getchar();
-		
+        scanf("%d", &choice);
+        getchar();
+
         switch (choice)
         {
         case 1:
-            //Display Function
-        	int rows;
-        	printf("Number of rows: ");
-        	scanf("%d", &rows);
+            // Display Function
+            int rows;
+            printf("Number of rows: ");
+            scanf("%d", &rows);
             displayData(listData, rows);
             break;
         case 2:
-            //Search function
+            // Search function
             {
                 char columnName[5005];
                 char searchValue[5005];
