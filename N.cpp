@@ -1,61 +1,111 @@
 #include <stdio.h>
 
-int board[8][8] = {0};
+char board[8][8]; // Chess board
 
-int moveX[8] = {2, 2, 1, -1, -2, -2, -1, 1};
-int moveY[8] = {1, -1, -2, -2, 1, -1, 2, 2};
+int flag = 0; // Flag to indicate if knight can reach destination
 
-int abs(int i){
-    if(i < 0){
-        i *= -1;
-    }
-    return 1;
-}
-bool result = false;
-void checkMove(int y1, int x1, int y2, int x2, int y3, int x3, int totalMove){
-    if(y3 < 0 || y3 > 7 || x3 < 0 || x3 > 7){
+// Function to perform knight's tour
+void knightTour(int i, int j, int count)
+{
+    // Base cases for recursion
+    if (i >= 8 || j >= 8 || i < 0 || j < 0 || board[i][j] == 'o' || count < 0)
+    {
         return;
     }
-    if(y3 == y2 && x3 == x2){
-        // printf("Dapat %d %d %d %d %d %d %d\n", y1, x1, y2, x2, y3, x3, totalMove);
-        result = true;
-        return;
-    }
-    if(totalMove <= 0){
-        return;
-    }    
-     if(abs(y1 - y2) < abs(y3 - y2) && abs(x1 - x2) < abs(x3 - x2)){
-         return;
-     }
-    // printf("Move : %d %d Remaining : %d\n", y3, x3, totalMove);
-    for(int i = 0; i < 8; i++){
-        if(result == true) break;
-        checkMove(y1, x1, y2, x2, y3 + moveY[i], x3 + moveX[i],totalMove - 1);
-    }
+
+    board[i][j] = 'o'; // Mark current position as visited
+    count--;           // Decrement count of remaining moves
+
+    // Recursive calls for all possible knight moves
+    knightTour(i + 1, j + 2, count);
+    knightTour(i + 1, j - 2, count);
+    knightTour(i - 1, j + 2, count);
+    knightTour(i - 1, j - 2, count);
+    knightTour(i + 2, j - 1, count);
+    knightTour(i + 2, j + 1, count);
+    knightTour(i - 2, j + 1, count);
+    knightTour(i - 2, j - 1, count);
 }
 
-int main(){
-    long long int tc;
-    scanf("%lli", &tc);getchar();
+// Function to check if knight can reach destination
+void knightTour2(int i, int j, int count)
+{
+    // Base cases for recursion
+    if (i > 8 || j > 8 || i < 0 || j < 0 || count < 0)
+    {
+        return;
+    }
 
-    for(int i = 0; i < tc; i++){
-        long long int totalMove;
-        scanf("%lli", &totalMove);getchar();
-        int x1, x2;
-        char y1, y2;
-        scanf("%c%d %c%d", &y1, &x1, &y2, &x2);getchar();
-        y1 -= 'A';
-        y2 -= 'A';
-        x1 -= 1;
-        x2 -= 1;
+    if (board[i][j] == 'o') // If destination is reached
+    {
+        board[i][j] = 'X'; // Mark destination as visited
+        flag = 1;          // Set flag to indicate success
+        return;
+    }
 
-        result = false;
-        checkMove(y1, x1, y2, x2, y1, x1, totalMove * 2);
-        if(result){
-            printf("Case #%d: YES\n", i+1);
-        }else{
-            printf("Case #%d: NO\n", i+1);
+    board[i][j] = 'o'; // Mark current position as visited
+    count--;           // Decrement count of remaining moves
+
+    // Recursive calls for all possible knight moves
+    knightTour2(i + 1, j + 2, count);
+    knightTour2(i + 1, j - 2, count);
+    knightTour2(i - 1, j + 2, count);
+    knightTour2(i - 1, j - 2, count);
+    knightTour2(i + 2, j - 1, count);
+    knightTour2(i + 2, j + 1, count);
+    knightTour2(i - 2, j + 1, count);
+    knightTour2(i - 2, j - 1, count);
+}
+
+int main()
+{
+    int tc;
+    scanf("%d", &tc);
+    getchar();
+
+    for (int cases = 1; cases <= tc; cases++)
+    {
+        int totalMoves;
+        scanf("%d", &totalMoves);
+        getchar();
+
+        char startX, destX;
+        int startY, destY;
+        scanf("%c%d %c%d", &startX, &startY, &destX, &destY);
+        getchar();
+
+        startY--;              // Convert to 0-based indexing
+        destY--;               // Convert to 0-based indexing
+        startX = startX - 'A'; // Convert to 0-based indexing
+        destX = destX - 'A';   // Convert to 0-based indexing
+
+        // Initialize chess board
+        for (int i = 0; i < 8; i++)
+        {
+            for (int j = 0; j < 8; j++)
+            {
+                board[i][j] = '.';
+            }
         }
+
+        printf("Case #%d: ", cases);
+
+        // Perform knight's tour from starting position
+        knightTour(startX, startY, totalMoves);
+
+        // Check if knight can reach destination
+        knightTour2(destX, destY, totalMoves);
+
+        if (flag == 1)
+        {
+            printf("YES\n");
+        }
+        else
+        {
+            printf("NO\n");
+        }
+
+        flag = 0; // Reset flag for next test case
     }
 
     return 0;
