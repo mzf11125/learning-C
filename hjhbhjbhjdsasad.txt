@@ -1,0 +1,43 @@
+Bibi is a lecturer at a university. At the end of the exam, Bibi’s students always come
+to her and ask about their ranking in the exam. Because Bibi is a good lecturer, Bibi
+always gives answers to them by looking at the grades book one by one.
+However, Bibi also felt that there was a faster way than having to check each student’s
+name one by one in the grades book. She also asked for your help to create a program
+that seeks a student ranking from the student data.
+If there are students who have the same value, then the ranking will be determined based
+on lexicographic order. So, if there are 2 students named AAA and BBB with a value of
+80. Then the AAA rating will be above BBB.
+Format Input
+The first line input contains
+T, the number of testcases. For each testcase consists of
+several lines. For the first row, it consists of
+N, which is the number of students taught
+by Bibi. For the next
+N line consists of “NAME#VALUE” of each student. On the
+N + 1 row consists of 1 name, the name of the student who asked about his ranking.
+Format Output
+For each test case, generate “Case
+#
+X: Y ”, where
+X represents the test case number
+and
+Y shows the rank of the student.
+Constraints • 1 ≤ T ≤ 10 • 1 ≤ N ≤ 1000 • 1 ≤ |NAMA| ≤ 10 • 1 ≤ N ilai ≤ 1000
+Sample Input 
+2
+3
+Jojo#40
+Lili#80
+Bibi#90
+Lili 
+3
+Jojo#100
+Lili#80
+Bibi#90
+Lili
+Sample Output (standard output)
+Case #1: 2
+Case #2: 3
+Note
+Even though it is not stated explicitly, you should know by now that excessive space /
+newline are treated as WRONG ANSWER
