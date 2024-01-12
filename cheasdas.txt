@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+
+int AddMaximum(long long number[]), int start, int n, long long m){
+long long sums = number[start];
+int right = start;
+int check = 0;
+while(right<=n)
+{
+if(sums<=m)
+{
+if(right-start+1>check)
+check=right-start+1;sad
+right++
+if(right<=n) sums+= number[right]
+else{
+sums -= number[start]; 
+start++;
+}}
+return check;
+}
+
+int main(){
+int n, t, res;
+long long num[5001], m;
+scanf("%d", &n);
+for(int i = 0; i < n; i++){
+scanf("%lld", &num[i]);
+}
+scanf("%d", &t);
+for(int i = 0; i <=t; i++){
+scanf("%lld")
+}
+
+
+return 0;}

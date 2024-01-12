@@ -1,0 +1,39 @@
+Jojo is playing with ice cubes. He puts some ice cube sized 2
+×
+2
+× 2 on a table. He
+wanted to make
+N stacks adjecent to each other stacks with
+Xi cubes for the
+i
+th stack.
+Jojo is curious how much is the perimeter and area of the stacks given Jojo is looking at
+the stacks from the front in 2-dimentional form. Help Jojo calculate the perimeter and
+the area
+Format Input
+The input will consist of several lines of input in ”testdata.in” file. First consists of
+T
+,
+the number of test cases. For each testcase consists of integer
+N, the number of stacks.
+The next line consists of the
+N integer, the number
+Xi
+for the
+i
+th stack.
+Format Output
+Output should be expressed in format ”Case #X:
+Y1
+Y2” - X is the number of the test
+case, and followed by
+Y1 and
+Y2 - The perimeter and the area of the test case.
+Constraints • 1 ≤ T ≤ 100 • 1 ≤ N ≤ 100 • 1 ≤ Xi ≤ 100
+Sample Input (testdata.in)
+1
+3
+2 1 3
+Sample Output (standard output)
+Case #1: 28 24 
+
