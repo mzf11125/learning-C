@@ -24,5 +24,6 @@ int main()
     }
     for (int i = 0; i < size; i++)
     {
+        if (arr_neg[i] > arr_neg)
     }
 }
