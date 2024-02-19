@@ -164,7 +164,7 @@ public class logic {
         System.out.println("Data karyawan berhasil diupdate.");
     }
 
-    // Method to delete data karyawan
+    // Method untuk delete data karyawan
     public void deleteDataKaryawan() {
         if (daftarKaryawan.isEmpty()) {
             System.out.println("Belum ada data karyawan.");
@@ -180,7 +180,7 @@ public class logic {
         System.out.println("==========================");
         System.out.print("Pilih nomor karyawan yang ingin dihapus (0 untuk batal): ");
         int choice = input.nextInt();
-        input.nextLine(); // Consume newline
+        input.nextLine(); 
 
         if (choice < 0 || choice > daftarKaryawan.size()) {
             System.out.println("Pilihan tidak valid.");
@@ -196,7 +196,7 @@ public class logic {
         System.out.println("Data karyawan berhasil dihapus: " + karyawan.getNamaKaryawan());
     }
 
-    // This method is to check if 
+    // Method untuk mengecek apakah kode karyawan sudah ada
     private boolean kodeKaryawanExists(String kodeKaryawan) {
         for (karyawan.Karyawan karyawan : daftarKaryawan) {
             if (karyawan.getKodeKaryawan().equals(kodeKaryawan)) {
@@ -206,7 +206,7 @@ public class logic {
         return false;
     }
 
-    // THis is the method to check if we should give bonus or not
+    // Method untuk mengecek apakah perusahaan perlu memberikan bonus atau tidak
     private void checkAndGiveBonus(String jabatan) {
         int count = countJabatan.getOrDefault(jabatan, 0);
         if (count % 3 == 0) {
