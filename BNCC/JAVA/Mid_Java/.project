@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>threading</name>
+	<name>Mid_Java</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1708345594674</id>
+			<id>1708345594632</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
