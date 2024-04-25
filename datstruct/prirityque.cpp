@@ -1,25 +1,33 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-struct Node {
+struct Node
+{
 	int val;
 	Node *next;
 	Node *prev;
-	Node() {
-		val = 0; next = prev = NULL;
+	Node()
+	{
+		val = 0;
+		next = prev = NULL;
 	}
-	Node(int _val) {
-		val = _val; next = prev = NULL;
+	Node(int _val)
+	{
+		val = _val;
+		next = prev = NULL;
 	}
 };
 
-struct PriorityQueue {
+struct PriorityQueue
+{
 private:
 	Node *head;
 	Node *tail;
-	void pushHead(int val) {
+	void pushHead(int val)
+	{
 		Node *newNode = new Node(val);
-		if (head == NULL) {
+		if (head == NULL)
+		{
 			head = newNode;
 			tail = newNode;
 			return;
@@ -29,9 +37,11 @@ private:
 		head = newNode;
 		return;
 	}
-	void pushTail(int val) {
+	void pushTail(int val)
+	{
 		Node *newNode = new Node(val);
-		if (head == NULL) {
+		if (head == NULL)
+		{
 			head = newNode;
 			tail = newNode;
 			return;
@@ -41,9 +51,12 @@ private:
 		tail = newNode;
 		return;
 	}
-	void popHead() {
-		if (head == NULL) return;
-		if (head == tail) {
+	void popHead()
+	{
+		if (head == NULL)
+			return;
+		if (head == tail)
+		{
 			delete head;
 			head = NULL;
 			tail = NULL;
@@ -55,9 +68,12 @@ private:
 		delete deleted;
 		return;
 	}
-	void popTail() {
-		if (head == NULL) return;
-		if (head == tail) {
+	void popTail()
+	{
+		if (head == NULL)
+			return;
+		if (head == tail)
+		{
 			delete head;
 			head = NULL;
 			tail = NULL;
@@ -69,39 +85,49 @@ private:
 		delete deleted;
 		return;
 	}
+
 public:
-	PriorityQueue() {
+	PriorityQueue()
+	{
 		head = tail = NULL;
 	}
-	void debug() {
+	void debug()
+	{
 		Node *cur = head;
 		cout << "Head: ";
-		while (cur != NULL) {
+		while (cur != NULL)
+		{
 			cout << cur->val << " ";
 			cur = cur->next;
 		}
 		cout << endl;
-		
+
 		cur = tail;
 		cout << "Tail: ";
-		while (cur != NULL) {
+		while (cur != NULL)
+		{
 			cout << cur->val << " ";
 			cur = cur->prev;
 		}
 		cout << endl;
 	}
-	void insert(int val) {
-		if (head == NULL || val <= head->val) {
+	void insert(int val)
+	{
+		if (head == NULL || val <= head->val)
+		{
 			pushHead(val);
 			return;
 		}
-		if (val >= tail->val) {
+		if (val >= tail->val)
+		{
 			pushTail(val);
 			return;
 		}
 		Node *cur = head;
-		while (cur != NULL) {
-			if (cur->val <= val && val <= cur->next->val) {
+		while (cur != NULL)
+		{
+			if (cur->val <= val && val <= cur->next->val)
+			{
 				// pushMid
 				Node *newNode = new Node(val);
 				newNode->prev = cur;
@@ -114,19 +140,25 @@ public:
 		}
 		return;
 	}
-	void erase(int val) {
-		if (head == NULL) return;
-		if (head->val == val) {
+	void erase(int val)
+	{
+		if (head == NULL)
+			return;
+		if (head->val == val)
+		{
 			popHead();
 			return;
 		}
-		if (tail->val == val) {
+		if (tail->val == val)
+		{
 			popTail();
 			return;
 		}
 		Node *cur = head;
-		while (cur != NULL) {
-			if (cur->val == val) {
+		while (cur != NULL)
+		{
+			if (cur->val == val)
+			{
 				// popMid
 				cur->prev->next = cur->next;
 				cur->next->prev = cur->prev;
@@ -137,13 +169,16 @@ public:
 		}
 		return;
 	}
-	int highest() {
-		if (tail == NULL) return -1;
+	int highest()
+	{
+		if (tail == NULL)
+			return -1;
 		return tail->val;
 	}
 };
 
-int main() {
+int main()
+{
 	PriorityQueue A;
 	A.insert(5);
 	A.insert(7);
