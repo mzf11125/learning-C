@@ -9,6 +9,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+	public static final int WIDTH= 1000;
+	public static final int HEIGHT= 700;
+	
 	
     @Override
     public void start(Stage primaryStage) {
@@ -17,7 +20,7 @@ public class Main extends Application {
         MenuController controller = new MenuController(menuService);
         MenuView view = new MenuView(controller);
 
-        Scene scene = new Scene(view);
+        Scene scene = new Scene(view, WIDTH, HEIGHT);
         primaryStage.setTitle("Pudding Menu App");
         primaryStage.setScene(scene);
         primaryStage.show();
