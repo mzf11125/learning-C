@@ -1,73 +1,74 @@
-package controller;
+package view;
 
+import controller.MenuController;
 import model.Menu;
-import service.MenuService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 
-public class HomeController {
-    private MenuService menuService;
+public class MenuView extends GridPane {
     private TextField nameField;
     private TextField priceField;
     private TextField stockField;
     private ListView<Menu> menuListView;
 
-    public HomeController(MenuService menuService) {
-        this.menuService = menuService;
+    private MenuController controller;
+
+    public MenuView(MenuController controller) {
+        this.controller = controller;
+        createView();
+        refreshMenuList();
     }
 
-    public GridPane createRootPane() {
-        GridPane gridPane = new GridPane();
-        gridPane.setHgap(10);
-        gridPane.setVgap(10);
+    private void createView() {
+        setPadding(new Insets(10));
+        setHgap(10);
+        setVgap(10);
 
         Label nameLabel = new Label("Name:");
-        gridPane.add(nameLabel, 0, 0);
+        add(nameLabel, 0, 0);
 
         nameField = new TextField();
-        gridPane.add(nameField, 1, 0);
+        add(nameField, 1, 0);
 
         Label priceLabel = new Label("Price:");
-        gridPane.add(priceLabel, 0, 1);
+        add(priceLabel, 0, 1);
 
         priceField = new TextField();
-        gridPane.add(priceField, 1, 1);
+        add(priceField, 1, 1);
 
         Label stockLabel = new Label("Stock:");
-        gridPane.add(stockLabel, 0, 2);
+        add(stockLabel, 0, 2);
 
         stockField = new TextField();
-        gridPane.add(stockField, 1, 2);
+        add(stockField, 1, 2);
 
         Button insertButton = new Button("Insert");
         insertButton.setOnAction(event -> handleInsertMenu());
-        gridPane.add(insertButton, 0, 3);
+        add(insertButton, 0, 3);
 
         Button updateButton = new Button("Update");
         updateButton.setOnAction(event -> handleUpdateMenu());
-        gridPane.add(updateButton, 1, 3);
+        add(updateButton, 1, 3);
 
         Button deleteButton = new Button("Delete");
         deleteButton.setOnAction(event -> handleDeleteMenu());
-        gridPane.add(deleteButton, 2, 3);
+        add(deleteButton, 2, 3);
 
         menuListView = new ListView<>();
         menuListView.setOnMouseClicked(event -> populateFields());
-        gridPane.add(menuListView, 0, 4, 3, 1);
-
-        refreshMenuList();
-
-        return gridPane;
+        add(menuListView, 0, 4, 3, 1);
     }
 
     private void handleInsertMenu() {
         String name = nameField.getText();
         double price = Double.parseDouble(priceField.getText());
         int stock = Integer.parseInt(stockField.getText());
-        menuService.insertMenu(name, price, stock);
+        controller.insertMenu(name, price, stock);
         refreshMenuList();
+        clearFields();
     }
 
     private void handleUpdateMenu() {
@@ -75,16 +76,18 @@ public class HomeController {
         if (selectedMenu != null) {
             double newPrice = Double.parseDouble(priceField.getText());
             int newStock = Integer.parseInt(stockField.getText());
-            menuService.updateMenu(selectedMenu.getCode(), newPrice, newStock);
+            controller.updateMenu(selectedMenu.getCode(), newPrice, newStock);
             refreshMenuList();
+            clearFields();
         }
     }
 
     private void handleDeleteMenu() {
         Menu selectedMenu = menuListView.getSelectionModel().getSelectedItem();
         if (selectedMenu != null) {
-            menuService.deleteMenu(selectedMenu.getCode());
+            controller.deleteMenu(selectedMenu.getCode());
             refreshMenuList();
+            clearFields();
         }
     }
 
@@ -97,8 +100,14 @@ public class HomeController {
         }
     }
 
+    private void clearFields() {
+        nameField.clear();
+        priceField.clear();
+        stockField.clear();
+    }
+
     private void refreshMenuList() {
-        ObservableList<Menu> menuData = FXCollections.observableArrayList(menuService.getMenus());
+        ObservableList<Menu> menuData = FXCollections.observableArrayList(controller.getMenus());
         menuListView.setItems(menuData);
     }
 }
