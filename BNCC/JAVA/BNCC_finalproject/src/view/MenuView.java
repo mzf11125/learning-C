@@ -112,15 +112,6 @@ public class MenuView extends GridPane {
         }
     }
 
-//	private void populateFields() {
-//        Menu selectedMenu = menuListView.getSelectionModel().getSelectedItem();
-//        if (selectedMenu != null) {
-//            nameField.setText(selectedMenu.getName());
-//            priceField.setText(String.valueOf(selectedMenu.getPrice()));
-//            stockField.setText(String.valueOf(selectedMenu.getStock()));
-//        }
-//    }
-
     private void clearFields() {
         nameField.clear();
         priceField.clear();
