@@ -13,7 +13,7 @@ public class MenuView extends GridPane {
     private TextField nameField;
     private TextField priceField;
     private TextField stockField;
-    private ListView<Menu> menuListView;
+    private TableView<Menu> menuTableView;
 
     private MenuController controller;
 
@@ -23,7 +23,8 @@ public class MenuView extends GridPane {
         refreshMenuList();
     }
 
-    private void createView() {
+    @SuppressWarnings("unchecked")
+	private void createView() {
         setPadding(new Insets(10));
         setHgap(10);
         setVgap(10);
@@ -60,10 +61,25 @@ public class MenuView extends GridPane {
         buttonBox.getChildren().add(deleteButton);
         add(buttonBox, 0, 3, 2, 1);  // Span 2 columns
 
-        // Create and configure menu list view
-        menuListView = new ListView<>();
-        menuListView.setPrefWidth(Integer.MAX_VALUE); 
-        add(menuListView, 0, 4, 2, 1); // Span 2 columns
+        // Create and configure menu table view
+        menuTableView = new TableView<>();
+        menuTableView.setPrefWidth(Integer.MAX_VALUE);
+
+        // Create table columns
+        TableColumn<Menu, String> codeColumn = new TableColumn<>("Code");
+        codeColumn.setCellValueFactory(cellData -> cellData.getValue().codeProperty());
+
+        TableColumn<Menu, String> nameColumn = new TableColumn<>("Name");
+        nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
+
+        TableColumn<Menu, Double> priceColumn = new TableColumn<>("Price");
+        priceColumn.setCellValueFactory(cellData -> cellData.getValue().priceProperty().asObject());
+
+        TableColumn<Menu, Integer> stockColumn = new TableColumn<>("Stock");
+        stockColumn.setCellValueFactory(cellData -> cellData.getValue().stockProperty().asObject());
+
+        menuTableView.getColumns().addAll(codeColumn, nameColumn, priceColumn, stockColumn);
+        add(menuTableView, 0, 4, 2, 1); // Span 2 columns
     }
 
 
@@ -77,7 +93,7 @@ public class MenuView extends GridPane {
     }
 
     private void handleUpdateMenu() {
-        Menu selectedMenu = menuListView.getSelectionModel().getSelectedItem();
+        Menu selectedMenu = menuTableView.getSelectionModel().getSelectedItem();
         if (selectedMenu != null) {
             double newPrice = Double.parseDouble(priceField.getText());
             int newStock = Integer.parseInt(stockField.getText());
@@ -88,7 +104,7 @@ public class MenuView extends GridPane {
     }
 
     private void handleDeleteMenu() {
-        Menu selectedMenu = menuListView.getSelectionModel().getSelectedItem();
+        Menu selectedMenu = menuTableView.getSelectionModel().getSelectedItem();
         if (selectedMenu != null) {
             controller.deleteMenu(selectedMenu.getCode());
             refreshMenuList();
@@ -115,20 +131,7 @@ public class MenuView extends GridPane {
     
     private void refreshMenuList() {
         ObservableList<Menu> menuData = FXCollections.observableArrayList(controller.getMenus());
-        menuListView.setItems(menuData);
-
-        // Set a custom cell factory to display the menu details
-        menuListView.setCellFactory(lv -> new ListCell<Menu>() {
-            @Override
-            protected void updateItem(Menu menu, boolean empty) {
-                super.updateItem(menu, empty);
-                if (empty || menu == null) {
-                    setText(null);
-                } else {
-                    setText(String.format("Code: %s, Name: %s, Price: $%.2f, Stock: %d", menu.getCode(), menu.getName(), menu.getPrice(), menu.getStock()));
-                }
-            }
-        });
+        menuTableView.setItems(menuData);
     }
     
     

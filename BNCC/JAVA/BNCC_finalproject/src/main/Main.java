@@ -6,6 +6,7 @@ import service.MenuService;
 import view.MenuView;
 import javafx.application.Application;
 import javafx.scene.Scene;
+//import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -19,7 +20,7 @@ public class Main extends Application {
         MenuService menuService = new MenuService(menuDatabase);
         MenuController controller = new MenuController(menuService);
         MenuView view = new MenuView(controller);
-
+//        TableView table = new TableView<MenuController>();
         Scene scene = new Scene(view, WIDTH, HEIGHT);
         primaryStage.setTitle("Pudding Menu App");
         primaryStage.setScene(scene);
