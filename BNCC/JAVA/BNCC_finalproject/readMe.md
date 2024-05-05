@@ -11,8 +11,11 @@ CREATE TABLE menu (
    name VARCHAR(50) NOT NULL,
    price DECIMAL(10, 2) NOT NULL,
    stock INT NOT NULL
-);```
+);
 
-and now the Java apps should work
 
-Hopefully I got good grades for this :)
+
+```
+Now the Java app should work, hopefully I got good grades for this :)
+
+
