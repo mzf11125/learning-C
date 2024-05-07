@@ -7,12 +7,11 @@ struct Node {
     string data;
     Node* next;
 
-    Node(string value) : data(value), next(nullptr) {}
+    Node(string value) : data(value), next(nullptr) {}//Make the new insterted value as the Data in Node
 };
 
 // Linked list class
-class LinkedList {
-private:
+struct LinkedList {
     Node* head;
 
 public:
@@ -58,6 +57,10 @@ public:
             cout << count++ << ". " << current->data << endl;
             current = current->next;
         }
+    }
+
+    Node* getHead() {
+        return head;
     }
 };
 
@@ -140,7 +143,6 @@ public:
         return results;
     }
 
-private:
     TrieNode* searchNode(string word) {
         TrieNode* node = root;
         for (char c : word) {
@@ -263,13 +265,15 @@ int main() {
                 cin.get();
                 break;
             }
-            case 5:
+            case 5: {
                 cout << "Thank you... Have a nice day :)" << endl;
                 break;
-            default:
+            }
+            default: {
                 cout << "Invalid choice. Please try again." << endl;
                 break;
             }
         }
-    }while
-  }
+    }while(choice!=5);
+    return 0;
+}
