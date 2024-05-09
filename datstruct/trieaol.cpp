@@ -130,7 +130,7 @@ public:
         return "";
     }
 
-    LinkedList startsWith(string prefix) {
+    LinkedList startsWith(string prefix) { //
         LinkedList results;
         TrieNode* node = searchNode(prefix);
         if (node != nullptr) {
@@ -143,9 +143,9 @@ public:
         return results;
     }
 
-    LinkedList getAllWords() {
-        LinkedList results;
-        collectWords(root, "", results);
+    LinkedList getAllWords() { //Function to het all the words in the Linked List
+        LinkedList results; //Declare linkedlist results 
+        collectWords(root, "", results); //
         return results;
     }
 
