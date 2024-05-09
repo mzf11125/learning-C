@@ -5,41 +5,47 @@ using namespace std;
 // Node structure for linked list
 struct Node {
     string data;
-    Node* next;
-
-    Node(string value) : data(value), next(nullptr) {}//Make the new insterted value as the Data in Node
+    Node* next;    //Next pointer
+    
+    Node(string value){//Make the new insterted value as the Data in Node
+    	data = value;
+    	next = NULL;
+	}
 };
 
-// Linked list class
+// Linked list structure
 struct LinkedList {
-    Node* head;
+    Node* head; //Create the node head of the LinkedList
 
 public:
-    LinkedList() : head(nullptr) {}
 
-    ~LinkedList() {
-        Node* current = head;
-        while (current != nullptr) {
-            Node* temp = current;
-            current = current->next;
-            delete temp;
+	LinkedList(){ //empty LinkedList funciton
+		head = NULL; //Set point to head to null
+	}
+
+    ~LinkedList() { //Destructor to free the memory that was occupied by LinkedList
+        Node* current = head; //Declare that current node is head of LinkedList
+        while (current != NULL) { //While loop as long as current is not NULL
+            Node* temp = current; //Set temporary node as current node
+            current = current->next;//Set the current node as the next node of current node
+            delete temp; //Delete the temporary node
         }
     }
 
-    void append(string value) {
-        Node* newNode = new Node(value);
-        if (head == nullptr) {
-            head = newNode;
+    void append(string value) { //Function to append to the LinkedList
+        Node* newNode = new Node(value); // 
+        if (head == NULL) { //If head is a null
+            head = newNode; //
         } else {
             Node* current = head;
-            while (current->next != nullptr) {
-                current = current->next;
+            while (current->next != NULL) { //While loop condition as long as the node next to current is not null
+                current = current->next; //We set current to the next node of current
             }
-            current->next = newNode;
+            current->next = newNode; //If it null then we new node next to the current node
         }
     }
 
-    bool contains(string value) {
+    bool contains(string value) { //Function to chec if hte 
         Node* current = head;
         while (current != nullptr) {
             if (current->data == value) {
@@ -66,10 +72,10 @@ public:
 
 // Trie Node structure
 struct TrieNode {
-    TrieNode* children[26];
-    string description;
-    bool isEndOfWord;
-    LinkedList* prefixList;
+    TrieNode* children[26]; //Children pointer
+    string description; //The description for each trienode
+    bool isEndOfWord;  //declare vraiabel to check for the end of word or not
+    LinkedList* prefixList; //
 
     TrieNode() {
         for (int i = 0; i < 26; i++) {
@@ -86,14 +92,14 @@ struct TrieNode {
 
 // Trie structure
 class Trie {
-    TrieNode* root;
+    TrieNode* root; //Declare the root of the trienode
 
 public:
-    Trie() {
-        root = new TrieNode();
+    Trie() { //Empty trienode
+        root = new TrieNode(); //declare root as new trienode
     }
 
-    ~Trie() {
+    ~Trie() { //Function to delete trie
         delete root;
     }
 
@@ -129,7 +135,7 @@ public:
         TrieNode* node = searchNode(prefix);
         if (node != nullptr) {
             Node* current = node->prefixList->head;
-            while (current != nullptr) {
+            while (current != NULL) {
                 results.append(current->data);
                 current = current->next;
             }
@@ -173,19 +179,19 @@ bool isValidWord(string word) {
 
 bool isValidDescription(string desc) {
     int spaceCount = 0;
-    for (char c : desc) {
-        if (c == ' ') {
-            spaceCount++;
+    for (char c : desc) { //Current char iterates over the description
+        if (c == ' ') { //if C is space
+            spaceCount++; //Space count +1
         }
     }
-    return spaceCount > 0;
+    return spaceCount > 0; //return if space count is less than 0
 }
 
 int main() {
-    Trie dictionary;
-    int choice;
+    Trie dictionary; //Declare Trie as dictionary
+    int choice; //Create int choice for menu
 
-    do {
+    do { //Do while for loop
         cout << "Boogle Slang Word App" << endl;
         cout << "1. Release a new slang word" << endl;
         cout << "2. Search a slang word" << endl;
@@ -274,6 +280,6 @@ int main() {
                 break;
             }
         }
-    }while(choice!=5);
-    return 0;
+    }while(choice!=5); //End loop if choice is not equal to 5
+    return 0; 
 }
