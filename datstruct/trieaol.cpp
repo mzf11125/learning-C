@@ -8,8 +8,8 @@ struct Node {
     Node* next;    //Next pointer
     
     Node(string value){//Make the new insterted value as the Data in Node
-    	data = value;
-    	next = NULL;
+    	data = value; //Set data as value inserted
+    	next = NULL; //Set next pointer as null
 	}
 };
 
@@ -19,8 +19,8 @@ struct LinkedList {
 
 public:
 
-	LinkedList(){ //empty LinkedList funciton
-		head = NULL; //Set point to head to null
+	LinkedList(){ //Declare empty LinkedList funciton
+		head = NULL; //Set pointer to head as null
 	}
 
     ~LinkedList() { //Destructor to free the memory that was occupied by LinkedList
@@ -56,17 +56,17 @@ public:
         return false;
     }
 
-    void print() {
-        Node* current = head;
-        int count = 1;
-        while (current != nullptr) {
-            cout << count++ << ". " << current->data << endl;
-            current = current->next;
+    void print() { //Funciton to print the word in the linkedlist
+        Node* current = head; //Set the current node as head
+        int count = 1; //Start count from
+        while (current != NULL) { //as long as current is not NULL
+            cout << count++ << ". " << current->data << endl; //Print the count . and the current data and endl
+            current = current->next; //Set current as the next node of current node
         }
     }
 
-    Node* getHead() {
-        return head;
+    Node* getHead() { //Get the head of the LinkedList
+        return head; //return the head
     }
 };
 
@@ -77,16 +77,16 @@ struct TrieNode {
     bool isEndOfWord;  //Variable to indicate for the end of the word 
     LinkedList* prefixList; //pointer to a linked list data structure, store the words that share the same prefix represented by the current trienode
 
-    TrieNode() { 
-        for (int i = 0; i < 26; i++) {
-            children[i] = nullptr;
+    TrieNode() {  //Declare empty trienode
+        for (int i = 0; i < 26; i++) { //For loop as long as the alphabet
+            children[i] = NULL; //Set all children as NULL
         }
-        isEndOfWord = false;
-        prefixList = new LinkedList();
+        isEndOfWord = false; //Set the end of the word as false since we just started
+        prefixList = new LinkedList(); //Set prefixlist as new linkedlist
     }
 
-    ~TrieNode() {
-        delete prefixList;
+    ~TrieNode() { //Destructor for the Trienode
+        delete prefixList; //Delete the prefix list
     }
 };
 
@@ -99,25 +99,25 @@ public:
         root = new TrieNode(); //declare root as new trienode
     }
 
-    ~Trie() { //Function to delete trie
-        delete root;
+    ~Trie() { //Deconstructor for the trie
+        delete root; //Delete the root of the trie
     }
 
-    void insert(string word, string desc) {
-        TrieNode* node = root;
-        for (char c : word) {
-            int index = c - 'a';
-            if (!node->children[index]) {
-                node->children[index] = new TrieNode();
+    void insert(string word, string desc) { //Function to insert to the new 
+        TrieNode* node = root; //Set the trienode node as root
+        for (char c : word) { //Iterate the current caharcther thorugh the word
+            int index = c - 'a'; //Set index as current characther - 'a'(64)
+            if (!node->children[index]) { //Condition if children in the index is null 
+                node->children[index] = new TrieNode(); //Then create a newTrieNode in that children
             }
-            node->prefixList->append(word);
-            node = node->children[index];
+            node->prefixList->append(word); // Appends the word to the list of prefixes with the current node
+            node = node->children[index]; // Moves to the child node at the given index
         }
-        node->isEndOfWord = true;
-        node->description = desc;
+        node->isEndOfWord = true; //
+        node->description = desc; //
     }
 
-    bool search(string word) {
+    bool search(string word) { //
         TrieNode* node = searchNode(word);
         return node != nullptr && node->isEndOfWord;
     }
@@ -196,7 +196,7 @@ bool isValidDescription(string desc) {
             spaceCount++; //Space count +1
         }
     }
-    return spaceCount > 0; //return if space count is less than 0
+    return spaceCount > 1; //return if space count is greater than 1
 }
 
 int main() {
