@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> //Import the C++ library
 
-using namespace std;
+using namespace std; //Use the standard namespace so we don't have to repeatedly write std everytime
 
 // Node structure for linked list
-struct Node {
-    string data;
+struct Node { 
+    string data; //Declare the data string
     Node* next;    //Next pointer
     
     Node(string value){//Make the new insterted value as the Data in Node
@@ -72,12 +72,12 @@ public:
 
 // Trie Node structure
 struct TrieNode {
-    TrieNode* children[26]; //Children pointer
-    string description; //The description for each trienode
-    bool isEndOfWord;  //declare vraiabel to check for the end of word or not
-    LinkedList* prefixList; //
+    TrieNode* children[26]; //Children pointer, representing the alphabet from 'a' to 'z'
+    string description; //String to store the description of the word represented by the trienode
+    bool isEndOfWord;  //Variable to indicate for the end of the word 
+    LinkedList* prefixList; //pointer to a linked list data structure, store the words that share the same prefix represented by the current trienode
 
-    TrieNode() {
+    TrieNode() { 
         for (int i = 0; i < 26; i++) {
             children[i] = nullptr;
         }
@@ -173,8 +173,20 @@ public:
     }
 };
 
-bool isValidWord(string word) {
-    return word.length() > 1 && word.find(' ') == string::npos;
+bool isValidWord(string word) { //Function to check if the word has more than one characther
+    
+	// Check if the word has more than one character
+    if (word.length() <= 1) {
+        return false;
+    }
+
+    // Check if the word contains any spaces
+    if (word.find(' ') != string::npos) {
+        return false;
+    }
+
+    // If the word passes both checks, it is considered valid
+    return true;
 }
 
 bool isValidDescription(string desc) {
