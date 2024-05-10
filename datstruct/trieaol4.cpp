@@ -91,7 +91,7 @@ struct TrieNode {
 };
 
 // Trie structure
-class Trie {
+struct Trie {
     TrieNode* root; //Declare the root of the trienode
 
 public:
@@ -212,85 +212,92 @@ int main() {
         cout << "5. Exit" << endl; //Print menu option 5
         cout << "Enter your choice: "; //Prompt user to enter choice
         cin >> choice; //Read user's choice
-
-        switch (choice) { //Switch statement based on user's choice
-            case 1: { //Case 1: Release a new slang word
-                string word, desc; //Declare strings to store word and description
-                do {
-                    cout << "Input a new slang word [Must be more than 1 characters and contains no space]: "; //Prompt for word
-                    cin >> word; //Read word from user
-                } while (!isValidWord(word)); //Loop until a valid word is entered
-
-                do {
-                    cout << "Input a new slang word description [Must be more than 2 words]: "; //Prompt for description
-                    cin.ignore(); //Ignore the newline character left in the input buffer
-                    getline(cin, desc); //Read description from user
-                } while (!isValidDescription(desc)); //Loop until a valid description is entered
-
-                if (dictionary.search(word)) { //If the word already exists in the dictionary
-                    dictionary.insert(word, desc); //Update the description for the existing word
-                    cout << "Successfully updated a slang word." << endl; //Print success message
-                } else {
-                    dictionary.insert(word, desc); //Insert the new word and description
-                    cout << "Successfully released new slang word." << endl; //Print success message
-                }
-                cout << "Press enter to continue..." << endl; //Prompt user to press Enter
-                cin.get(); //Wait for user input (consume the newline character)
-                break; //Break out of the switch statement
-            }
-            case 2: { //Case 2: Search a slang word
-                string word;
-                do {
-                    cout << "Input a slang word to be searched [Must be more than 1 characters and contains no space]: ";
-                    cin >> word;
-                } while (!isValidWord(word));
-
-                if (dictionary.search(word)) { //If the word is found in the dictionary
-                    cout << "Slang word : " << word << endl; //Print the word
-                    cout << "Description : " << dictionary.getDescription(word) << endl; //Print the description
-                } else {
-                    cout << "There is no word \"" << word << "\" in the dictionary." << endl; //Print message if word not found
-                }
-                cout << "Press enter to continue..." << endl;  //User has to press enter to continue
-                cin.get();
-                break;
-            }
-            case 3: { //Case 3: View all slang words starting with a certain prefix
-                string prefix;
-                cout << "Input a prefix to be searched: "; //Prompt for prefix
-                cin >> prefix; //Read prefix from user
-
-                LinkedList words = dictionary.startsWith(prefix); //Get the list of words starting with the prefix
-                if (words.head == nullptr) { //If the list is empty
-                    cout << "There is no prefix \"" << prefix << "\" in the dictionary." << endl; //Print message
-                } else {
-                    cout << "Words starts with \"" << prefix << "\":" << endl; //Print header
-                    words.print(); //Print the list of words
-                }
-                cout << "Press enter to continue..." << endl;
-                cin.get();
-                break;
-            }
-            case 4: { //Case 4: View all slang words
-                LinkedList words = dictionary.getAllWords(); //Get the list of all words
-                if (words.head == nullptr) { //If the list is empty
-                    cout << "There is no slang word yet in the dictionary." << endl; //Print message
-                } else {
-                    cout << "List of all slang words in the dictionary:" << endl; //Print header
-                    words.print(); //Print the list of words
-                }
-                cout << "Press enter to continue..." << endl;
-                cin.get();
-                break;
-            }
-            case 5: { //Case 5: Exit
-                cout << "Thank you... Have a nice day :)" << endl; //Print farewell message
-                break; //Break out of the switch statement
-            }
-            default: { //Default case: Invalid choice
-                cout << "Invalid choice. Please try again." << endl; //Print error message
-                break; //Break out of the switch statement
-            }
+        cin.clear();
+        cin.ignore(10000, '\n');
+//        if (!(cin >> choice)) {
+//            cout << "Invalid input. Please try again." << endl;
+//            cin.clear(); // Clear the error state of the cin stream
+//            cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the invalid input
+//        } else {
+            switch (choice) { //Switch statement based on user's choice
+	            case 1: { //Case 1: Release a new slang word
+	                string word, desc; //Declare strings to store word and description
+	                do {
+	                    cout << "Input a new slang word [Must be more than 1 characters and contains no space]: "; //Prompt for word
+	                    cin >> word; //Read word from user
+	                } while (!isValidWord(word)); //Loop until a valid word is entered
+	
+	                do {
+	                    cout << "Input a new slang word description [Must be more than 2 words]: "; //Prompt for description
+	                    cin.ignore(); //Ignore the newline character left in the input buffer
+	                    getline(cin, desc); //Read description from user
+	                } while (!isValidDescription(desc)); //Loop until a valid description is entered
+	
+	                if (dictionary.search(word)) { //If the word already exists in the dictionary
+	                    dictionary.insert(word, desc); //Update the description for the existing word
+	                    cout << "Successfully updated a slang word." << endl; //Print success message
+	                } else {
+	                    dictionary.insert(word, desc); //Insert the new word and description
+	                    cout << "Successfully released new slang word." << endl; //Print success message
+	                }
+	                cout << "Press enter to continue..." << endl; //Prompt user to press Enter
+	                cin.get(); //Wait for user input (consume the newline character)
+	                break; //Break out of the switch statement
+	            }
+	            case 2: { //Case 2: Search a slang word
+	                string word;
+	                do {
+	                    cout << "Input a slang word to be searched [Must be more than 1 characters and contains no space]: ";
+	                    cin >> word;
+	                } while (!isValidWord(word));
+	
+	                if (dictionary.search(word)) { //If the word is found in the dictionary
+	                    cout << "Slang word : " << word << endl; //Print the word
+	                    cout << "Description : " << dictionary.getDescription(word) << endl; //Print the description
+	                } else {
+	                    cout << "There is no word \"" << word << "\" in the dictionary." << endl; //Print message if word not found
+	                }
+	                cout << "Press enter to continue..." << endl;  //User has to press enter to continue
+	                cin.get();                                       
+	                break;
+	            }
+	            case 3: { //Case 3: View all slang words starting with a certain prefix
+	                string prefix;
+	                cout << "Input a prefix to be searched: "; //Prompt for prefix
+	                cin >> prefix; //Read prefix from user
+	
+	                LinkedList words = dictionary.startsWith(prefix); //Get the list of words starting with the prefix
+	                if (words.head == nullptr) { //If the list is empty
+	                    cout << "There is no prefix \"" << prefix << "\" in the dictionary." << endl; //Print message
+	                } else {
+	                    cout << "Words starts with \"" << prefix << "\":" << endl; //Print header
+	                    words.print(); //Print the list of words
+	                }
+	                cout << "Press enter to continue..." << endl;
+	                cin.get();
+	                break;
+	            }
+	            case 4: { //Case 4: View all slang words
+	                LinkedList words = dictionary.getAllWords(); //Get the list of all words
+	                if (words.head == nullptr) { //If the list is empty
+	                    cout << "There is no slang word yet in the dictionary." << endl; //Print message
+	                } else {
+	                    cout << "List of all slang words in the dictionary:" << endl; //Print header
+	                    words.print(); //Print the list of words
+	                }
+	                cout << "Press enter to continue..." << endl;
+	                cin.get();
+	                break;
+	            }
+	            case 5: { //Case 5: Exit
+	                cout << "Thank you... Have a nice day :)" << endl; //Print farewell message
+	                break; //Break out of the switch statement
+	            }
+	            default: { //Default case: Invalid choice
+	                cout << "Invalid choice. Please try again." << endl; //Print error message
+	                break;                                                                    
+	            }
+//			}
         }
     } while(choice != 5); //End loop if choice is equal to 5 (Exit)
     return 0; //Return 0 to indicate successful program execution
