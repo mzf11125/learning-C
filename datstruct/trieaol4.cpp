@@ -8,6 +8,12 @@ struct Node
     string data; // Declare the data string
     Node *next;  // Next pointer
 
+    Node() // Initialize empty Node
+    {
+        data = "";
+        next = NULL;
+    }
+
     Node(string value)
     {                 // Make the new insterted value as the Data in Node
         data = value; // Set data as value inserted
@@ -104,8 +110,18 @@ struct TrieNode
     }
 
     ~TrieNode()
-    {                      // Destructor for the Trienode
-        delete prefixList; // Delete the prefix list
+    { // Destructor for the Trienode
+        if (prefixList != NULL)
+        {
+            for (int i = 0; i < 26; i++)
+            {
+                if (children[i] != NULL)
+                {
+                    delete children[i];
+                    children[i] = NULL;
+                }
+            }
+        }
     }
 };
 
@@ -121,22 +137,55 @@ public:
     }
 
     ~Trie()
-    {                // Deconstructor for the trie
-        delete root; // Delete the root of the trie
+    { // Deconstructor for the trie
+        if (root != NULL)
+        {
+            delete root; // Delete the root of the trie
+            root = NULL;
+        }
     }
 
     void insert(string word, string desc)
     {                          // Function to insert a new word and description
         TrieNode *node = root; // Set the trienode node as root
         for (char c : word)
-        {                        // Iterate over each character in the word
-            int index = c - 'a'; // Calculate index as current character minus 'a'(97 ASCII table)
-            if (!node->children[index])
-            {                                           // Check if the child node at the index is null
-                node->children[index] = new TrieNode(); // Create a new TrieNode at that index
+        {
+            // Iterate over each character in the word
+            if (c < 0 || c >= 26)
+            {
+                // Check if the index is out of bounds
+                // Convert the character to lowercase
+                c = tolower(c);
+                int index = c - 'a';
+                // Check if the new index is still out of bounds
+                if (index < 0 || index >= 26)
+                {
+                    cout << "Invalid character: " << c << endl;
+                    return;
+                }
             }
-            node = node->children[index];   // Move to the child node at the given index
-            node->prefixList->append(word); // Append the word to the prefix list of the current node
+            if (c >= 'a' && c <= 'z')
+            {
+                int index = c - 'a';
+                // Calculate index as current character minus 'a' (97 ASCII table)
+
+                if (!node->children[index])
+                {
+                    // Check if the child node at the index is null
+                    node->children[index] = new TrieNode();
+                    // Create a new TrieNode at that index
+                }
+                node = node->children[index];
+            }
+            else
+            {
+                cout << "Invalid character: " << c << endl;
+                return;
+            }
+
+            // Move to the child node at the given index
+            node->prefixList->append(word);
+            // Append the word to the prefix list of the current node
         }
         node->isEndOfWord = true; // Set the current node as the end of the word
         node->description = desc; // Assign the description to the current node
@@ -182,18 +231,25 @@ public:
     }
 
     TrieNode *searchNode(string word)
-    {                          // Helper function to search for a node representing a word
-        TrieNode *node = root; // Start at the root node
+    {
+        TrieNode *node = root;
         for (char c : word)
-        {                        // Iterate over each character in the word
-            int index = c - 'a'; // Calculate the index based on the character
+        {
+            int index = c - 'a';
             if (!node->children[index])
-            {                // If the child node at the index doesn't exist
-                return NULL; // Return null
+            {
+                return NULL;
             }
-            node = node->children[index]; // Move to the child node
+            node = node->children[index];
         }
-        return node; // Return the node representing the word
+        if (node->isEndOfWord) // Check if the node represents the end of a word
+        {
+            return node;
+        }
+        else
+        {
+            return NULL;
+        }
     }
 
     void collectWords(TrieNode *node, string word, LinkedList &results)
@@ -261,7 +317,8 @@ int main()
         cin >> choice;                                                                 // Read user's choice
         getchar();
         switch (choice)
-        { // Switch statement based on user's choice
+        {
+        // Switch statement based on user's choice
         case 1:
         {
             // Case 1: Release a new slang word
@@ -271,9 +328,10 @@ int main()
             {
                 cout << "Input a new slang word [Must be more than 1 character and contain no spaces]: ";
                 // Prompt for word
-                cin >> ws;          // Clear leading whitespace
                 getline(cin, word); // Read word from user
             } while (!isValidWord(word)); // Use logical NOT operator directly
+
+            getchar();
 
             do
             {
@@ -295,8 +353,13 @@ int main()
                 cout << "Successfully released new slang word." << endl; // Print success message
             }
             cout << "Press enter to continue..." << endl; // Prompt user to press Enter
-            cin.ignore();                                 // Wait for user input (consume the newline character)
-            break;                                        // Break out of the switch statement
+            // cin.ignore();                                 // Wait for user input (consume the newline character)
+            getchar(); // Wait for user input (consume the newline character)
+
+            // Clear the word and desc after case 1 ends
+            word.clear();
+            desc.clear();
+            break; // Break out of the switch statement
         }
         case 2:
         { // Case 2: Search a slang word
@@ -304,8 +367,12 @@ int main()
             do
             {
                 cout << "Input a slang word to be searched [Must be more than 1 characters and contains no space]: ";
-                cin >> word;
+                cin >> ws;
+                getline(cin, word);
+                // cin >> word;
             } while (!isValidWord(word));
+
+            getchar();
 
             if (dictionary.search(word))
             {                                                                        // If the word is found in the dictionary
@@ -318,6 +385,7 @@ int main()
             }
             cout << "Press enter to continue..." << endl; // User has to press enter to continue
             getchar();
+            word.clear();
             break;
         }
         case 3:
@@ -338,6 +406,7 @@ int main()
             }
             cout << "Press enter to continue..." << endl;
             getchar();
+            prefix.clear();
             break;
         }
         case 4:

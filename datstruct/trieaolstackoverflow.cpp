@@ -188,7 +188,10 @@ public:
 
     TrieNode *searchNode(string word)
     {                          // Helper function to search for a node representing a word
-        TrieNode *node = root; // Start at the root node
+        TrieNode *node = root; // Start at the root node\
+        
+        
+        
         for (char c : word)
         {                        // Iterate over each character in the word
             int index = c - 'a'; // Calculate the index based on the character
