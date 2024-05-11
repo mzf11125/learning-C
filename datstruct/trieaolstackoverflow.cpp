@@ -1,4 +1,4 @@
-#include <bits/stdc++.h> //Import the C++ library
+#include <bits/stdc++.h> // Include the C++ library for common data structures and functions
 
 using namespace std; // Use the standard namespace so we don't have to repeatedly write std everytime
 
@@ -9,11 +9,12 @@ struct Node
     Node *next;  // Next pointer
 
     Node(string value)
-    {                 // Make the new insterted value as the Data in Node
-        data = value; // Set data as value inserted
+    {                 // Constructor to create a new Node with the given value
+        data = value; // Set data as the given value
         next = NULL;  // Set next pointer as null
     }
 };
+
 // Linked list structure
 struct LinkedList
 {
@@ -21,7 +22,7 @@ struct LinkedList
 
 public:
     LinkedList()
-    {                // Declare empty LinkedList funciton
+    {                // Constructor to create an empty LinkedList
         head = NULL; // Set pointer to head as null
     }
 
@@ -57,7 +58,7 @@ public:
     bool contains(string value)
     {                         // Function to check if the linked list contains a specific value
         Node *current = head; // Set current node as the head
-        while (current != NULL)
+        while (current != nullptr)
         { // Loop until current is null
             if (current->data == value)
             {                // If the current node's data matches the given value
@@ -94,7 +95,7 @@ struct TrieNode
     LinkedList *prefixList; // pointer to a linked list data structure, store the words that share the same prefix represented by the current trienode
 
     TrieNode()
-    { // Declare empty trienode
+    { // Constructor to create an empty trienode
         for (int i = 0; i < 26; i++)
         {                       // For loop as long as the alphabet
             children[i] = NULL; // Set all children as NULL
@@ -106,6 +107,10 @@ struct TrieNode
     ~TrieNode()
     {                      // Destructor for the Trienode
         delete prefixList; // Delete the prefix list
+        for (int i = 0; i < 26; i++)
+        {
+            delete children[i]; // Delete all children to prevent memory leaks
+        }
     }
 };
 
@@ -116,7 +121,7 @@ struct Trie
 
 public:
     Trie()
-    {                          // Empty trienode
+    {                          // Constructor to create an empty trie
         root = new TrieNode(); // declare root as a new trienode
     }
 
@@ -130,28 +135,28 @@ public:
         TrieNode *node = root; // Set the trienode node as root
         for (char c : word)
         {                        // Iterate over each character in the word
-            int index = c - 'a'; // Calculate index as current character minus 'a'(97 ASCII table)
+            int index = c - 'a'; // Set index as current character - 'a'(64)
             if (!node->children[index])
-            {                                           // Check if the child node at the index is null
-                node->children[index] = new TrieNode(); // Create a new TrieNode at that index
+            {                                           // Condition if children at the index is null
+                node->children[index] = new TrieNode(); // Then create a new TrieNode at that children
             }
-            node = node->children[index];   // Move to the child node at the given index
-            node->prefixList->append(word); // Append the word to the prefix list of the current node
+            node->prefixList->append(word); // Appends the word to the list of prefixes with the current node
+            node = node->children[index];   // Moves to the child node at the given index
         }
-        node->isEndOfWord = true; // Set the current node as the end of the word
-        node->description = desc; // Assign the description to the current node
+        node->isEndOfWord = true; // Mark the current node as the end of the word
+        node->description = desc; // Store the description at the current node
     }
 
     bool search(string word)
-    {                                             // Function to search for a word
-        TrieNode *node = searchNode(word);        // Get the node representing the word
-        return node != NULL && node->isEndOfWord; // Return true if the node exists and is marked as the end of a word
+    {                                                // Function to search for a word
+        TrieNode *node = searchNode(word);           // Get the node representing the word
+        return node != nullptr && node->isEndOfWord; // Return true if the node exists and is marked as the end of a word
     }
 
     string getDescription(string word)
     {                                      // Function to get the description of a word
         TrieNode *node = searchNode(word); // Get the node representing the word
-        if (node != NULL && node->isEndOfWord)
+        if (node != nullptr && node->isEndOfWord)
         {                             // If the node exists and is marked as the end of a word
             return node->description; // Return the description
         }
@@ -162,7 +167,7 @@ public:
     {                                        // Function to get all words starting with a given prefix
         LinkedList results;                  // Declare a new linked list to store the results
         TrieNode *node = searchNode(prefix); // Get the node representing the prefix
-        if (node != NULL)
+        if (node != nullptr)
         {                                           // If the node exists
             Node *current = node->prefixList->head; // Get the head of the prefix list
             while (current != NULL)
@@ -175,10 +180,10 @@ public:
     }
 
     LinkedList getAllWords()
-    {                                    // Function to retrieve all words stored in the Trie
-        LinkedList results;              // Initialize a new linked list to hold the results
-        collectWords(root, "", results); // Utilize the helper function to gather all words
-        return results;                  // Return the populated results list
+    {                                    // Function to get all the words in the Trie
+        LinkedList results;              // Declare a new linked list to store the results
+        collectWords(root, "", results); // Call the helper function to collect all words
+        return results;                  // Return the results list
     }
 
     TrieNode *searchNode(string word)
@@ -188,25 +193,35 @@ public:
         {                        // Iterate over each character in the word
             int index = c - 'a'; // Calculate the index based on the character
             if (!node->children[index])
-            {                // If the child node at the index doesn't exist
-                return NULL; // Return null
+            {                   // If the child node at the index doesn't exist
+                return nullptr; // Return null
             }
             node = node->children[index]; // Move to the child node
         }
         return node; // Return the node representing the word
     }
 
-    void collectWords(TrieNode *node, string word, LinkedList &results)
-    { // Helper function to collect all words in the Trie
+    //    void collectWords(TrieNode* node, string word, LinkedList& results) { // Helper function to collect all words in the Trie
+    //        if (node->isEndOfWord) { // If the current node marks the end of a word
+    //            results.append(word); // Append the word to the results list
+    //        }
+    //        for (int i = 0; i < 26; i++) { // Iterate over all possible characters
+    //            if (node->children[i]) { // If the child node exists
+    //                collectWords(node->children[i], word + char(i + 'a'), results); // Recursively collect words with the current prefix
+    //            }
+    //        }
+    //    }
+    void collectWords(TrieNode *node, string prefix, LinkedList &results)
+    {
         if (node->isEndOfWord)
-        {                         // If the current node marks the end of a word
-            results.append(word); // Append the word to the results list
+        {
+            results.append(prefix);
         }
         for (int i = 0; i < 26; i++)
-        { // Iterate over all possible characters
+        {
             if (node->children[i])
-            {                                                                   // If the child node exists
-                collectWords(node->children[i], word + char(i + 'a'), results); // Recursively collect words with the current prefix
+            {
+                collectWords(node->children[i], prefix + char(i + 'a'), results);
             }
         }
     }
@@ -250,7 +265,7 @@ int main()
     int choice;      // Create int choice for menu
 
     do
-    {                                                                                  // Do while loop
+    {                                                                                  // Do-while loop
         cout << "Boogle Slang Word App" << endl;                                       // Print the app name
         cout << "1. Release a new slang word" << endl;                                 // Print menu option 1
         cout << "2. Search a slang word" << endl;                                      // Print menu option 2
@@ -259,43 +274,33 @@ int main()
         cout << "5. Exit" << endl;                                                     // Print menu option 5
         cout << "Enter your choice: ";                                                 // Prompt user to enter choice
         cin >> choice;                                                                 // Read user's choice
-        getchar();
+
         switch (choice)
         { // Switch statement based on user's choice
         case 1:
-        {
-            // Case 1: Release a new slang word
-            string word, desc;
-            // Declare strings to store word and description
+        {                      // Case 1: Release a new slang word
+            string word, desc; // Declare strings to store word and description
             do
             {
-                cout << "Input a new slang word [Must be more than 1 character and contain no spaces]: ";
-                // Prompt for word
-                cin >> ws;          // Clear leading whitespace
-                getline(cin, word); // Read word from user
-            } while (!isValidWord(word)); // Use logical NOT operator directly
-
-            do
-            {
-                cout << "Input a new slang word description [Must be more than 2 words]: ";
-                // Prompt for description
-                getline(cin, desc); // Read description from user
-            } while (!isValidDescription(desc)); // Use logical NOT operator directly
+                cout << "Input a new slang word [Must be more than 1 characters and contains no space]: "; // Prompt for word
+                cin >> word;                                                                               // Read word from user
+                cout << "Input a new slang word description [Must be more than 2 words]: ";                // Prompt for description
+                cin.ignore();                                                                              // Ignore the newline character left in the input buffer
+                getline(cin, desc);                                                                        // Read description from user
+            } while (!isValidWord(word) || !isValidDescription(desc)); // Loop until a valid word and description are entered
 
             if (dictionary.search(word))
-            {
-                // If the word already exists in the dictionary
-                cout << "The word already exists. Updating the description." << endl;
+            {                                                         // If the word already exists in the dictionary
                 dictionary.insert(word, desc);                        // Update the description for the existing word
                 cout << "Successfully updated a slang word." << endl; // Print success message
             }
             else
             {
-                dictionary.insert(word, desc);                           // Insert the new word and description into the trie
+                dictionary.insert(word, desc);                           // Insert the new word and description
                 cout << "Successfully released new slang word." << endl; // Print success message
             }
             cout << "Press enter to continue..." << endl; // Prompt user to press Enter
-            cin.ignore();                                 // Wait for user input (consume the newline character)
+            cin.get();                                    // Wait for user input (consume the newline character)
             break;                                        // Break out of the switch statement
         }
         case 2:
@@ -317,7 +322,7 @@ int main()
                 cout << "There is no word \"" << word << "\" in the dictionary." << endl; // Print message if word not found
             }
             cout << "Press enter to continue..." << endl; // User has to press enter to continue
-            getchar();
+            cin.get();
             break;
         }
         case 3:
@@ -327,7 +332,7 @@ int main()
             cin >> prefix;                             // Read prefix from user
 
             LinkedList words = dictionary.startsWith(prefix); // Get the list of words starting with the prefix
-            if (words.head == NULL)
+            if (words.head == nullptr)
             {                                                                                 // If the list is empty
                 cout << "There is no prefix \"" << prefix << "\" in the dictionary." << endl; // Print message
             }
@@ -337,13 +342,13 @@ int main()
                 words.print();                                             // Print the list of words
             }
             cout << "Press enter to continue..." << endl;
-            getchar();
+            cin.get();
             break;
         }
         case 4:
         {                                                // Case 4: View all slang words
             LinkedList words = dictionary.getAllWords(); // Get the list of all words
-            if (words.head == NULL)
+            if (words.head == nullptr)
             {                                                                    // If the list is empty
                 cout << "There is no slang word yet in the dictionary." << endl; // Print message
             }
@@ -353,7 +358,7 @@ int main()
                 words.print();                                                // Print the list of words
             }
             cout << "Press enter to continue..." << endl;
-            getchar();
+            cin.get();
             break;
         }
         case 5:
@@ -366,7 +371,6 @@ int main()
             cout << "Invalid choice. Please try again." << endl; // Print error message
             break;
         }
-            //			}
         }
     } while (choice != 5); // End loop if choice is equal to 5 (Exit)
     return 0; // Return 0 to indicate successful program execution
