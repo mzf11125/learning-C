@@ -1,35 +1,31 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-
 
 struct Node
 {
 	int val;
-	Node* prev;
-	Node* next;
+	Node *prev;
+	Node *next;
 
-	Node(){
-		val = 0; prev = next = NULL;
+	Node()
+	{
+		val = 0;
+		prev = next = NULL;
 	}
 
-	Node(int val){
-		val = this->val; prev = next = NULL;
+	Node(int val)
+	{
+		val = this->val;
+		prev = next = NULL;
 	}
 };
 
-
-struct BST {
-	Node* root;
-	BST() {
-		root = NULL
+struct BST
+{
+	Node *root;
+	BST(){
+		root = NULL};
+	Node *insert(Node *cur, int key)
+	{
 	}
-	Node* insert(Node *cur, int key) {
-		
-
-
-
-
-	}
-
-
 };

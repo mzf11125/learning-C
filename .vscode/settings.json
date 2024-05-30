@@ -1,5 +1,15 @@
 {
-    "files.associations": {
-        "string": "cpp"
-    }
+  "files.associations": {
+    "string": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "vector": "cpp",
+    "xhash": "cpp",
+    "xstring": "cpp",
+    "xtree": "cpp",
+    "utility": "cpp",
+    "xiosbase": "cpp",
+    "xutility": "cpp"
+  }
 }
